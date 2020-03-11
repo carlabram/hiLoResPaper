@@ -99,8 +99,7 @@
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
-\author[L.E.~Abramson et al.]{L.E.~Abramson$^{1}$\thanks{E-mail: \href{mailto:labramson@carnegiescience.edu}{labramson@carnegiescience.edu}}, 
-D.D.~Kelson$^{1}$
+\author[Abramson \& Kelson]{Louis E.~Abramson$^{1}$\thanks{E-mail: \href{mailto:labramson@carnegiescience.edu}{labramson@carnegiescience.edu}} and Daniel D.~Kelson$^{1}$
 \\
 \\
 % List of institutions
@@ -140,29 +139,33 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 \section{Introduction}
 \label{sec:intro}
 
-One of the main ambitions of the study of galaxy evolution is to understand how galaxies grow in 
-stellar mass over time. This is done by decomposing galaxies' spectral energy distributions (SEDs)
-into combinations of stellar populations of different ages. The coefficients that weight each stellar
-population---which have distinct colors---then represent the amount of stellar mass a galaxy is
-inferred to have formed at the lookback time that corresponds to that age.
+A central ambition of the study of galaxy evolution is understanding stellar mass growth; i.e., galaxy
+star formation histories (SFHs). Spectral energy distributions (SEDs) are the key data in this work because 
+they can be decomposed into combinations of distinct stellar populations of known ages. The resulting 
+coefficients yield the amount of stellar mass a galaxy is inferred to have formed at the lookback time 
+corresponding to each population's age.
 
-The SEDs of stellar populations are distinct but not orthogonal. As such, there are degeneracies.
-Obviously, those are compounded by formally age-independent effects from metallicity and dust
-reddening. To alleviate those degeneracies---especially with respect to metallicity---and increase
-the contrast of the extant stellar populations, high resolution spectra ($R\sim1000$s) can be used in 
-addition to sets of broadband colors. The hope in this approach is that the details of absorption 
-lines that are differentially sensitive to age and metallicity might enable more accurate coefficients
-to be inferred for the amount of mass formed at any given lookback time.
+Stellar populations have different but not orthogonal SEDs. As such, the above decompositions are 
+usually degenerate. Such degeneracies are compounded by age-independent effects like metallicity and 
+dust reddening. 
 
-The utility of this approach is testable. For example, spectral decompositions of low spectral resolution
-SEDs---comprised of photometry or a mix of photometry and $R\lesssim100s$ spectroscopy---can
-be modeled to infer a star formation history (SFH), which can in turn be used to produce a prediction of
-features at quasi-arbitrarily higher spectral resolution. These predictions can be compared to 
-actual high resolution observations to see whether said features add any useful age-sensitive
-information that might enhance the accuracy of the inferred SFHs.
+To alleviate those degeneracies, high resolution spectra ($R\sim1000$s) are often used in addition to 
+galaxy broadband colors in the model fitting. The hope is that the details of absorption lines will potentially 
+increase the contrast between stellar subpopulations, constrain metallicity, and so yield more accurate 
+age/mass coefficients. The utility of these data is usually taken as axiomatic, but it is also readily testable. 
 
-We carry that experiment out here. Using a set of \ntot
+This paper presents an experiment that shows there is very little information in high resolution spectra
+that enhance constraints on galaxy SFHs compared to inferences based on a combination of photometry and 
+very low resolution ($R\lesssim100$s) prism spectra.\footnote{A future paper will extend this statement 
+to photometry based inferences alone.} We perform this experiment by using precomputed SFH inferences
+based on low resolution SEDs for a set of \ntot\ systems at $\langle z\rangle=\midz$ to produce predictions 
+of each galaxy's high-resolution spectrum, and comparing these predictions to actual high resolution 
+observations taken post-facto. With the exception of the Balmer lines---whose divergence from predictions 
+is readily ascribable to emission line infilling---we find differences to be of order {\bfr whatever they are}, 
+suggesting {\bfr whatever we say they do}.
 
+Throughout, we use AB magnitudes and assume $(H_{0}, \Omega_{M}, \Omega_{\Lambda}) = 
+(70~{\rm km~s^{-1}~Mpc^{-1}}, 0.3, 0.7)$.
 
 
 %------------------------------------------------------------------------------------------------------------------------------------------
