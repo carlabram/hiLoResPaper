@@ -82,6 +82,7 @@
 \newcommand{\ntot}{{\bfr XXX}} % total objects in high-res sample
 \newcommand{\midz}{{\bfr ZZZ}} % their median redshift
 
+\newcommand{\CITE}{{\bfr CITE}}
 \newcommand{\facilities}{{\it Facilities:}}
 \newcommand{\software}{{\it Software:}}
 
@@ -164,8 +165,11 @@ observations taken post-facto. With the exception of the Balmer lines---whose di
 is readily ascribable to emission line infilling---we find differences to be of order {\bfr whatever they are}, 
 suggesting {\bfr whatever we say they do}.
 
-Throughout, we use AB magnitudes and assume $(H_{0}, \Omega_{M}, \Omega_{\Lambda}) = 
-(70~{\rm km~s^{-1}~Mpc^{-1}}, 0.3, 0.7)$.
+Below, Section \ref{sec:data} describes the data on which our experiment is based, Section \ref{sec:results} 
+shows the comparisons between our high resolution spectral predictions and the high resolution data, and
+Section \ref{sec:discussion} describes the implications of these results. We use AB magnitudes and assume 
+a \citet{Chabrier03} stellar initial mass function (IMF) with $(H_{0}, \Omega_{M}, \Omega_{\Lambda}) =
+(70~{\rm km~s^{-1}~Mpc^{-1}}, 0.3, 0.7)$ throughout.
 
 
 %------------------------------------------------------------------------------------------------------------------------------------------
@@ -174,12 +178,34 @@ Throughout, we use AB magnitudes and assume $(H_{0}, \Omega_{M}, \Omega_{\Lambda
 \section{Data}
 \label{sec:data}
 
+\subsection{Master sample}
+\label{sec:master}
+
+This experiment is based on the {\it Carnegie Spitzer IMACS Survey} \citep[CSI;][]{Kelson14a}. CSI provides
+Magellan-IMACS Low- and Uniform-Dispersion Prism spectroscopy for objects with {\it Spitzer} 
+$[3.5]\leq21$ in {\bfr XXX sq.~deg.} from {\bfr THESE FIELDS}. Combined with supplemental 
+$ugrizJK_{s}$ photometry from the NEWFIRM archive (\CITE) and Canada-France-Hawai`i Telescope 
+Legacy Survey (CFHTLS; \CITE), these data were used to derive flexible SFHs for each galaxy as part of 
+the redshift estimation process. The sample is complete to $\log\Mstel\sim10.3$ at $z\sim0.7$.
+The spectral resolution of the prisms varies from $R\sim{\bfr XXX}$ to $R\sim{\bfr YYY}$ at
+{\bfr wavelengths}, about {\bfr THIS MUCH WORSE} than the Sloan Digital Sky Survey \citep{York00}.
+
+\citet{Dressler16, Dressler18} examine the CSI SFHs in detail. \citet{Dressler18} provides a thorough treatment 
+of SFH inference quality in its Appendix as assessed via simulations and comparisons of objects with repeat 
+observations. We defer the reader to those texts for that information, but briefly review the SFH inference 
+process here. {\it None of these details are important in the context of the experiment we detail below}, which 
+should be repeated using other approaches.
+
+\subsection{High-resolution spectroscopy}
+\label{sec: hiRes}
+
+
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------
 
-\section{Sample Characteristics}
-\label{sec:sampChar}
+\section{Comparing predictions to high resolution data}
+\label{sec:results}
 
 
 %------------------------------------------------------------------------------------------------------------------------------------------
@@ -199,7 +225,7 @@ Foo.\\
 
 \noindent\facilities\ Magellan/IMACS
 
-\noindent\software\ IDL (Coyote libraries; \url{http://www.idlcoyote.com/}), python ({\texttt CarPy}).
+\noindent\software\ IDL (Coyote libraries; \url{http://www.idlcoyote.com/}), python (\texttt{CarPy}).
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------

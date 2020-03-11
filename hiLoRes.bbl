@@ -1,0 +1,45 @@
+\begin{thebibliography}{}
+\makeatletter
+\relax
+\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}
+  {\mn@doi@[]}}
+\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href
+  {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi
+  \endgroup}
+\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
+\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
+\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml}
+  {dblp:#1}}
+\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc
+  {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx
+  \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined
+  {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
+  mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
+
+\bibitem[\protect\citeauthoryear{{Chabrier}}{{Chabrier}}{2003}]{Chabrier03}
+{Chabrier} G.,  2003, \mn@doi [\pasp] {10.1086/376392}, \href
+  {http://adsabs.harvard.edu/abs/2003PASP..115..763C} {115, 763}
+
+\bibitem[\protect\citeauthoryear{{Dressler} et~al.,}{{Dressler}
+  et~al.}{2016}]{Dressler16}
+{Dressler} A.,  et~al., 2016, \mn@doi [\apj] {10.3847/1538-4357/833/2/251},
+  \href {http://adsabs.harvard.edu/abs/2016ApJ...833..251D} {833, 251}
+
+\bibitem[\protect\citeauthoryear{{Dressler}, {Kelson}  \&
+  {Abramson}}{{Dressler} et~al.}{2018}]{Dressler18}
+{Dressler} A.,  {Kelson} D.~D.,   {Abramson} L.~E.,  2018, \mn@doi [\apj]
+  {10.3847/1538-4357/aaedbe}, \href
+  {https://ui.adsabs.harvard.edu/abs/2018ApJ...869..152D} {869, 152}
+
+\bibitem[\protect\citeauthoryear{{Kelson} et~al.,}{{Kelson}
+  et~al.}{2014}]{Kelson14a}
+{Kelson} D.~D.,  et~al., 2014, \mn@doi [\apj] {10.1088/0004-637X/783/2/110},
+  \href {http://adsabs.harvard.edu/abs/2014ApJ...783..110K} {783, 110}
+
+\bibitem[\protect\citeauthoryear{{York} et~al.,}{{York} et~al.}{2000}]{York00}
+{York} D.~G.,  et~al., 2000, \mn@doi [\aj] {10.1086/301513}, \href
+  {http://adsabs.harvard.edu/abs/2000AJ....120.1579Y} {120, 1579}
+
+\makeatother
+\end{thebibliography}
