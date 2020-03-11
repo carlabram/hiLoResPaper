@@ -79,8 +79,8 @@
 
 \mathchardef\mhyphen="2D
 
-\newcommand{\ntot}{22755} % total objects in GLASS
-\newcommand{\midz}{0.60}
+\newcommand{\ntot}{{\bfr XXX}} % total objects in high-res sample
+\newcommand{\midz}{{\bfr ZZZ}} % their median redshift
 
 \newcommand{\facilities}{{\it Facilities:}}
 \newcommand{\software}{{\it Software:}}
@@ -95,8 +95,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[The GLASS ACS data release]{The Grism Lens-Amplified Survey from Space (GLASS). XIII. 
-	G800L optical spectra from the parallel fields}
+\title[Who needs spectra?]{Spectral resolution is not important for modeling galaxy growth}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -140,6 +139,30 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 
 \section{Introduction}
 \label{sec:intro}
+
+One of the main ambitions of the study of galaxy evolution is to understand how galaxies grow in 
+stellar mass over time. This is done by decomposing galaxies' spectral energy distributions (SEDs)
+into combinations of stellar populations of different ages. The coefficients that weight each stellar
+population---which have distinct colors---then represent the amount of stellar mass a galaxy is
+inferred to have formed at the lookback time that corresponds to that age.
+
+The SEDs of stellar populations are distinct but not orthogonal. As such, there are degeneracies.
+Obviously, those are compounded by formally age-independent effects from metallicity and dust
+reddening. To alleviate those degeneracies---especially with respect to metallicity---and increase
+the contrast of the extant stellar populations, high resolution spectra ($R\sim1000$s) can be used in 
+addition to sets of broadband colors. The hope in this approach is that the details of absorption 
+lines that are differentially sensitive to age and metallicity might enable more accurate coefficients
+to be inferred for the amount of mass formed at any given lookback time.
+
+The utility of this approach is testable. For example, spectral decompositions of low spectral resolution
+SEDs---comprised of photometry or a mix of photometry and $R\lesssim100s$ spectroscopy---can
+be modeled to infer a star formation history (SFH), which can in turn be used to produce a prediction of
+features at quasi-arbitrarily higher spectral resolution. These predictions can be compared to 
+actual high resolution observations to see whether said features add any useful age-sensitive
+information that might enhance the accuracy of the inferred SFHs.
+
+We carry that experiment out here. Using a set of \ntot
+
 
 
 %------------------------------------------------------------------------------------------------------------------------------------------
