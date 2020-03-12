@@ -217,13 +217,14 @@ detail below}, which should be repeated using other approaches.
 The CSI spectrophotometry was using 5 precomputed SEDs based on SFHs with constant star formation 
 rates (SFRs) spanning:
 \bitem
-	\item 0.0 to 0.2 Gyr; %prior to $\tobs$;
-	\item 0.2 to 0.5 Gyr; %prior to $\tobs$;
-	\item 0.5 to 1.0 Gyr; %prior to $\tobs$;
+	\item 0.0 to 0.2 Gyr prior to $\tobs$;
+	\item 0.2 to 0.5 Gyr prior to $\tobs$;
+	\item 0.5 to 1.0 Gyr prior to $\tobs$;
 	\item 1.0 to 2.0 Gyr prior to $\tobs$;
-	\item either 2.0 Gyr prior to $\tobs$ or $z\simeq 3$ to $z=5$ (1 Gyr),
+	\item 2.0 Gyr prior to $\tobs$ to $z=5$;
 \eitem
-where $\tobs$ corresponds to the object's redshift. The data determine the mode of the oldest bin.
+where $\tobs$ corresponds to the object's redshift and $z=5$ is taken as the onset of star formation. If 
+the data prefer, the oldest bin can also take the form of a 1 Gyr top hat starting at $z=5$.
 The median redshift of the samples studied in \citet{Dressler16, Dressler18} is $z\sim0.7$, or $\tobs\sim7$ Gyr.
 
 Each of the above SEDs was allowed to take an independent $A_{V}$ (assuming a \citealt{Calzetti00} 
@@ -231,8 +232,14 @@ extinction law) but not metallicity. The latter was inferred using a prior peake
 the predicted spectra do not capture the likely enrichment history of any object 
 \citep[cf.][]{Pacifici12, Morishita19}---a fact to bear in mind as we proceed.
 
-The SEDs are generated using the Flexible Stellar Population Synthesis code \citep{ConroyGunnWhite09}
-assuming default abundance patterns.
+All spectral templates were generated using Flexible Stellar Population Synthesis 
+\citep[FSPS;][]{ConroyGunnWhite09} assuming default abundance patterns. When inferring the SFHs, 
+these models---5 mass amplitudes + 5 $A_{V}$s + 1 metallicity + 1 redshift + 1 spectrophotometry fluxing 
+factor = 12 free parameters---were typically constrained by 7 + {\bfr $\sim$100} photometric + spectral 
+datapoints. The spectral models studied below are were regenerated using the best-fit SFH parameters
+at $R\sim800$ in the rest optical. Uncertainties are tabulated for the SFH bins but {\it not} propagated
+to the high resolution model spectra. As they therefore rely purely on data uncertainties, all comparisons 
+below should be regarded as conservative.
 
 \subsection{High-resolution spectroscopy}
 \label{sec: hiRes}
