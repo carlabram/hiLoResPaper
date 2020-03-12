@@ -17,9 +17,21 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{{Calzetti}, {Armus}, {Bohlin}, {Kinney},
+  {Koornneef}  \& {Storchi-Bergmann}}{{Calzetti} et~al.}{2000}]{Calzetti00}
+{Calzetti} D.,  {Armus} L.,  {Bohlin} R.~C.,  {Kinney} A.~L.,  {Koornneef} J.,
+   {Storchi-Bergmann} T.,  2000, \mn@doi [\apj] {10.1086/308692}, \href
+  {http://adsabs.harvard.edu/abs/2000ApJ...533..682C} {533, 682}
+
 \bibitem[\protect\citeauthoryear{{Chabrier}}{{Chabrier}}{2003}]{Chabrier03}
 {Chabrier} G.,  2003, \mn@doi [\pasp] {10.1086/376392}, \href
   {http://adsabs.harvard.edu/abs/2003PASP..115..763C} {115, 763}
+
+\bibitem[\protect\citeauthoryear{{Conroy}, {Gunn}  \& {White}}{{Conroy}
+  et~al.}{2009}]{ConroyGunnWhite09}
+{Conroy} C.,  {Gunn} J.~E.,   {White} M.,  2009, \mn@doi [\apj]
+  {10.1088/0004-637X/699/1/486}, \href
+  {http://adsabs.harvard.edu/abs/2009ApJ...699..486C} {699, 486}
 
 \bibitem[\protect\citeauthoryear{{Dressler} et~al.,}{{Dressler}
   et~al.}{2016}]{Dressler16}
@@ -36,6 +48,17 @@
   et~al.}{2014}]{Kelson14a}
 {Kelson} D.~D.,  et~al., 2014, \mn@doi [\apj] {10.1088/0004-637X/783/2/110},
   \href {http://adsabs.harvard.edu/abs/2014ApJ...783..110K} {783, 110}
+
+\bibitem[\protect\citeauthoryear{{Morishita} et~al.,}{{Morishita}
+  et~al.}{2019}]{Morishita19}
+{Morishita} T.,  et~al., 2019, \mn@doi [\apj] {10.3847/1538-4357/ab1d53}, \href
+  {https://ui.adsabs.harvard.edu/abs/2019ApJ...877..141M} {877, 141}
+
+\bibitem[\protect\citeauthoryear{{Pacifici}, {Charlot}, {Blaizot}  \&
+  {Brinchmann}}{{Pacifici} et~al.}{2012}]{Pacifici12}
+{Pacifici} C.,  {Charlot} S.,  {Blaizot} J.,   {Brinchmann} J.,  2012, \mn@doi
+  [\mnras] {10.1111/j.1365-2966.2012.20431.x}, \href
+  {http://adsabs.harvard.edu/abs/2012MNRAS.421.2002P} {421, 2002}
 
 \bibitem[\protect\citeauthoryear{{York} et~al.,}{{York} et~al.}{2000}]{York00}
 {York} D.~G.,  et~al., 2000, \mn@doi [\aj] {10.1086/301513}, \href

@@ -67,6 +67,7 @@
 \newcommand{\bfp}{\bf\color{magenta}}
 \newcommand{\ssfr}{{\rm sSFR}}
 \newcommand{\sfr}{{\rm SFR}}
+\newcommand{\tobs}{t_{\rm obs}}
 \newcommand{\zphot}{z_{\rm phot}}
 \newcommand{\zspec}{z_{\rm spec}}
 
@@ -125,32 +126,30 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 % Abstract of the paper
 \begin{abstract}
 
-	High resolution spectra are assumed to yield better constraints on galaxy star formation
-	histories (SFHs) than low resolution spectra or photometry. We test this statement 
-	by comparing actual $R\sim{\bfr 800}$ spectroscopy to high-resolution model predictions 
-	based on galaxy SFHs inferred from only $ugrizJK_{s}$ photometry and $R\sim25$ 
-	rest-optical spectra. From \ntot\ galaxies, we find the median difference between predicted 
-	and inferred Lick indices to be $\leq1\%$ for all indices except the Blamer lines---whose 
-	divergences are readily explained by unmodeled emission---and the CN$_{1}$ and G4300 
-	features in passive galaxies, which diverge by 2\% and 1.5\%, \resp. {\bfr $\chi^{2}$ stuff.} 
-	Absent a scientific motivation to measure such features to better precision, we therefore
-	find no utility in adding high resolution spectroscopy as an SFH modeling constraint, at least 
-	when the models are capable of capturing the intrinsic diversity of real growth trajectories. 
-	Our results cast doubt on the extent to which projects like the {\it James Webb Space Telescope}
-	will enhance our understanding of core questions in galaxy evolution and suggest that progress 
-	requires new tactics as much as new data.
+	We compare actual $R\sim{\bfr 800}$ spectroscopy to model predictions based on galaxy 
+	star formation histories (SFHs) inferred from much lower resolution data: $ugrizJK_{s}$ 
+	photometry and $R\sim25$ rest-optical prism spectra. From \ntot\ systems, we find a median 
+	difference of $\leq$1\% between all predicted and measured absorption features in the Lick index 
+	bandpasses except the Blamer lines---explainable by unmodeled emission---and Ca4227 and 
+	Fe5270 in {\it UVJ}-classified passive galaxies, which are 1.7\%--2.5\% weaker than expected. 
+	{\bfr $\chi^{2}$ stuff.} As such, absent a Ca-- or Fe--age prior accurate to the 2\% level---whose 
+	empirical apprehension is itself a motivation for SED fitting---we find no utility in adding 
+	high resolution spectroscopy as an SFH modeling constraint, at least when using models that capture 
+	the intrinsic diversity of real growth trajectories. Our results cast doubt on the extent to which 
+	spectra from the {\it James Webb Space Telescope} will enhance our understanding of galaxy 
+	growth and suggest that progress requires new tactics as much as new data.
+%	or a $\sigma_{v}-\Mstel$ prior with less than $\sim$0.2	dex of scatter
 %	By increasing the number of data points without adding meaningful physical details, such data 
 %	may in fact harm our understanding by unrealistically shrinking SFH uncertainties. 
 	%, if not the fundamental
 %	utility of the project of inferring SFHs from galaxy-level data.
 
 \end{abstract}
-%{\it Hubble Frontier Fields} and {\it Cluster Lensing and Supernova with Hubble}
 
 % Select between one and six entries from the list of approved keywords.
 % Don't make up new ones.
 \begin{keywords}
-	galaxies: surveys --- galaxies: spectroscopy --- spectroscopy: techniques
+	galaxies: spectroscopy
 \end{keywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -160,34 +159,34 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 \section{Introduction}
 \label{sec:intro}
 
-A central ambition of the study of galaxy evolution is understanding stellar mass growth; i.e., galaxy
+A central ambition of the study of galaxy evolution is to understand stellar mass growth; i.e., galaxy
 star formation histories (SFHs). Spectral energy distributions (SEDs) are the key data in this work because 
-they can be decomposed into combinations of distinct stellar populations of known ages. The resulting 
+they can be decomposed into combinations of distinct stellar subpopulations of known ages. The resulting 
 coefficients yield the amount of stellar mass a galaxy is inferred to have formed at the lookback time 
-corresponding to each population's age.
+corresponding to each subpopulation's age.
+	
+Different stellar subpopulations have different but not orthogonal SEDs. As such, galaxy decompositions 
+are degenerate. Of course, those degeneracies are compounded by age-independent effects like metallicity 
+and dust. 
 
-Stellar populations have different but not orthogonal SEDs. As such, the above decompositions are 
-usually degenerate. Such degeneracies are compounded by age-independent effects like metallicity and 
-dust reddening. 
+High resolution spectra ($R\sim500$--5000) are often used to alleviate those degeneracies in SFH model 
+fitting. The hope is that the absorption features that emerge in those data will increase the contrast 
+between constituent stellar subpopulations, constrain metallicities, and yield more accurate 
+age/mass coefficients. The utility of these data is usually taken as axiomatic, but it is also testable. 
 
-To alleviate those degeneracies, high resolution spectra ($R\sim1000$s) are often used in addition to 
-galaxy broadband colors in the model fitting. The hope is that the details of absorption lines will potentially 
-increase the contrast between stellar subpopulations, constrain metallicity, and so yield more accurate 
-age/mass coefficients. The utility of these data is usually taken as axiomatic, but it is also readily testable. 
+Here we present experiment that shows there is in fact little information in high resolution spectra
+that enhance constraints on galaxy SFHs compared to inferences based on a combination of broadband 
+photometry and low resolution ($R\sim25$) prism spectra.\footnote{A future paper will extend this statement 
+to pure photometry-based inferences.} We use precomputed SFH inferences based on such low resolution 
+SEDs for a set of \ntot\ systems at $\langle z\rangle=\midz$ to produce predictions 
+of each galaxy's high-resolution spectrum. We then compare those predictions to actual high resolution 
+($R\sim800$) observations taken post-facto. With the exception of the Balmer lines---whose divergence 
+from predictions is readily ascribable to emission line infilling---we find differences to be of order 
+{\bfr whatever they are}, suggesting {\bfr whatever we say they do}.
 
-This paper presents an experiment that shows there is very little information in high resolution spectra
-that enhance constraints on galaxy SFHs compared to inferences based on a combination of photometry and 
-very low resolution ($R\lesssim100$s) prism spectra.\footnote{A future paper will extend this statement 
-to photometry based inferences alone.} We perform this experiment by using precomputed SFH inferences
-based on low resolution SEDs for a set of \ntot\ systems at $\langle z\rangle=\midz$ to produce predictions 
-of each galaxy's high-resolution spectrum, and comparing these predictions to actual high resolution 
-observations taken post-facto. With the exception of the Balmer lines---whose divergence from predictions 
-is readily ascribable to emission line infilling---we find differences to be of order {\bfr whatever they are}, 
-suggesting {\bfr whatever we say they do}.
-
-Below, Section \ref{sec:data} describes the data on which our experiment is based, Section \ref{sec:results} 
-shows the comparisons between our high resolution spectral predictions and the high resolution data, and
-Section \ref{sec:discussion} describes the implications of these results. We use AB magnitudes and assume 
+Section \ref{sec:data} describes the data on which our experiment is based, Section \ref{sec:results} 
+shows the comparisons between our spectral predictions and the high resolution data, and Section
+\ref{sec:discussion} describes the implications of these results. We use AB magnitudes and assume 
 a \citet{Chabrier03} stellar initial mass function (IMF) with $(H_{0}, \Omega_{M}, \Omega_{\Lambda}) =
 (70~{\rm km~s^{-1}~Mpc^{-1}}, 0.3, 0.7)$ throughout.
 
@@ -202,21 +201,38 @@ a \citet{Chabrier03} stellar initial mass function (IMF) with $(H_{0}, \Omega_{M
 \label{sec:master}
 
 This experiment is based on the {\it Carnegie Spitzer IMACS Survey} \citep[CSI;][]{Kelson14a}. CSI provides
-Magellan-IMACS Low- and Uniform-Dispersion Prism spectroscopy for objects with {\it Spitzer} 
+Magellan-IMACS Low- and Uniform-Dispersion Prism spectroscopy (\CITE) for objects with {\it Spitzer} 
 $[3.5]\leq21$ in {\bfr XXX sq.~deg.} from {\bfr THESE FIELDS}. Combined with supplemental 
 $ugrizJK_{s}$ photometry from the NEWFIRM archive (\CITE) and Canada-France-Hawai`i Telescope 
 Legacy Survey (CFHTLS; \CITE), these data were used to derive flexible SFHs for each galaxy as part of 
-the redshift estimation process. The sample is complete to $\log\Mstel\sim10.3$ at $z\sim0.7$.
+the redshift estimation process. The sample is complete to $\logM\sim10.3$ at $z\sim0.7$.
 The spectral resolution of the prisms varies from $R\sim{\bfr XXX}$ to $R\sim{\bfr YYY}$ at
 {\bfr wavelengths}, about {\bfr THIS MUCH WORSE} than the Sloan Digital Sky Survey \citep{York00}.
 
 \citet{Dressler16, Dressler18} examine the CSI SFHs in detail. \citet{Dressler18} provides a thorough treatment 
-of SFH inference quality in its Appendix as assessed via simulations and comparisons of objects with repeat 
-observations. We defer the reader to those texts for that information, but briefly review the SFH inference 
-process here. {\it None of these details are important in the context of the experiment we detail below}, which 
-should be repeated using other approaches.
+of CSI SFH quality in its Appendix. We defer the reader to those texts for that information, but briefly review 
+the SFH inference process here. {\it None of these details are important in the context of the experiment we 
+detail below}, which should be repeated using other approaches.
 
-The CSI spectrophotometry was modeled by assuming 5 blocks SFHs spanned 
+The CSI spectrophotometry was using 5 precomputed SEDs based on SFHs with constant star formation 
+rates (SFRs) spanning:
+\bitem
+	\item 0.0 to 0.2 Gyr; %prior to $\tobs$;
+	\item 0.2 to 0.5 Gyr; %prior to $\tobs$;
+	\item 0.5 to 1.0 Gyr; %prior to $\tobs$;
+	\item 1.0 to 2.0 Gyr prior to $\tobs$;
+	\item either 2.0 Gyr prior to $\tobs$ or $z\simeq 3$ to $z=5$ (1 Gyr),
+\eitem
+where $\tobs$ corresponds to the object's redshift. The data determine the mode of the oldest bin.
+The median redshift of the samples studied in \citet{Dressler16, Dressler18} is $z\sim0.7$, or $\tobs\sim7$ Gyr.
+
+Each of the above SEDs was allowed to take an independent $A_{V}$ (assuming a \citealt{Calzetti00} 
+extinction law) but not metallicity. The latter was inferred using a prior peaked at $Z=Z_{\odot}$. As such,
+the predicted spectra do not capture the likely enrichment history of any object 
+\citep[cf.][]{Pacifici12, Morishita19}---a fact to bear in mind as we proceed.
+
+The SEDs are generated using the Flexible Stellar Population Synthesis code \citep{ConroyGunnWhite09}
+assuming default abundance patterns.
 
 \subsection{High-resolution spectroscopy}
 \label{sec: hiRes}
@@ -229,6 +245,9 @@ The CSI spectrophotometry was modeled by assuming 5 blocks SFHs spanned
 \section{Confronting predictions with high-resolution data}
 \label{sec:results}
 
+\subsection{Systematic errors}
+\label{sec:systematics}
+
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------
@@ -236,6 +255,10 @@ The CSI spectrophotometry was modeled by assuming 5 blocks SFHs spanned
 \section{Implications}
 \label{sec:discussion}
 
+\subsection{Where is the information going?}
+\label{sec:redshifts}
+
+Redshifts.
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------
