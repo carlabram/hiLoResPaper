@@ -263,37 +263,47 @@ and a brief description of $S/N$/data quality/etc.}
 \section{Implications}
 \label{sec:discussion}
 
-Our main finding is that spectral features only observable in costly, high-resolution spectroscopy
-are readily predicted by models fit to much cheaper broadband photometry and prism spectra. As
-such, obtaining the former seems irrelevant for investigators interested in inferring galaxy SFHs.
+Spectral features observable in costly, high-resolution spectroscopy are readily predicted by 
+models fit to cheaper broadband photometry and prism spectra. As such, obtaining the former 
+seems irrelevant for investigators interested in inferring galaxy SFHs.
 
-This fact prompts two questions: (1) Why is this the case? (2) What are the extra pixels doing?
-These questions relate to the difference between formal and meaningful information content.
+This fact prompts three questions: (1) Why? (2) What are the extra pixels doing? (3) What does
+this mean for the future? All of these relate to the difference between formal and meaningful 
+information content.
 
 \subsection{Spectral pixels are correlated}
 \label{sec:pixels}
 
-Regarding (1), the only answer can be that most of the pixels in high resolution spectra are
-not physically independent. This has been known for some time---Balmer line depths correlate
-with $B-V$ color or D4000, for example---but perhaps not fully appreciated. What we are
-finding here is that practically all of the line information is determined by some combiantion
-of local and remote parts of the continuum. That is, if the continuum is ``suitably'' sampled,
-it need not be ``well'' sampled. What ``suitably'' means in terms of the number and span
-of bandpasses necessary to predict spectral line depths to a given precision as a function of
-source redshift is a question much deserving of serious study. Whatever it is, the CSI SED 
-sampling meets or exceeds it at $z\lesssim1$, and a future paper will present evidence
-that one can do similarly well with the UltraVista 26-band filter set \citep{Muzzin13}.
+Driving the outcomes we find is the reality that most of the pixels in high resolution 
+spectra are physically correlated, even if they are mathematically independent. This is obvious to 
+some extent---Balmer line depths track $B-V$ or D4000---but we find that practically all of the 
+line information is determined by some (unknown) combination of the local and remote stellar 
+continuum. These physical correlations should be mathematically accounted for in the SED modeling 
+process to avoid making statements of unreasonable certainty.
 
-Regardless of what it is, however, the existence of a minimum-sampled SED suggests that 
-it is inappropriate to treat the pixels of more densely sampled data as independent in the
-context of SFH inferences. By treating each pixel as an additional degree of freedom and
-associated random uncertainty, one produces SFHs with formal uncertainties that in
+The nature of this correlation is the mathematical key to understanding the SFH$\,\mapsto\,$SED 
+mapping, and therefore our ability to invert the latter to get at the former; i.e., execute an empirical 
+study of galaxy evolution. This correlation is the mathematical foundation of the hypersurface 
+characterizing the precision to which $\Mstel(t)$ is informatically accessible at any $t$ as a function 
+of data---$S/N$, SED sampling---and galaxy properties---$\ssfr$, $Z$, $\sigma$, $A_{V}$, 
+environment, morphology. Machine learning may be the way to illuminate this mapping. 
+
+Regardless, from an SFH inference perspective, if an SED is suitably sampled it does not need to be 
+well sampled. What ``suitable'' means will be determined by the above informatic investigation, 
+but it is clear that CSI's sampling meets or exceeds that threshold at $z\lesssim1$, and a future paper 
+will present evidence the 26-band UltraVista filter set  \citep{Muzzin13} probably also does at 
+$z\sim0.4$.
+
+The existence of a minimum-sampled SED suggests that it is inappropriate to treat the pixels 
+of more densely sampled data as independent in the context of SFH inferences. By accounting for each 
+pixel it's own degree of freedom, one produces SFHs with formal uncertainties that in
 no way reflect physical uncertainties. Adding sources of systematics---which may correlate
-the pixels---should reinflate the resultant unreasonably small SFH uncertainties, but we
-are arguing (and a future paper will show) that even in the absence of systematics the
-extra pixels are providing apparent modeling constraints while having no physical
-discriminatory power. As such, they should not be treated as independent in terms of their
-constraints on SFHs.
+the pixels---should reinflate the resultant SFH uncertainties, but that correlation may not reflect
+the correct physical degeneracies, which will provide a floor---perhaps a floor we have already 
+reached---irrespective of one's ability to suppress systematics.
+% in terms of the number/span of bandpasses required to 
+%predict SFHs to a given precision as a function of redshift 
+%though it is very different from the question of ``What is a galaxy's SFH?'' 
 
 A likely corollary to the above is that wavelength baseline is key. Our results here suggest
 the high resolution details of the rest-optical if one has access, e.g., to infrared data. However,
@@ -343,8 +353,10 @@ simulations or first-principles theoretical predictions. Of course, if the IMF i
 time, one encounters the same problems as with $\sigma$.
 
 The real key is redshifts...
-
 %Redshifts, velocity dispersions, emission line details.
+
+\subsection{Future Work}
+\label{sec:future}
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------
