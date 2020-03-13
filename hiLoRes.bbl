@@ -17,6 +17,14 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{{Abramson}, {Brammer}, {Schmidt}, {Treu},
+  {Morishita}, {Wang}, {Vulcani}  \& {Henry}}{{Abramson}
+  et~al.}{2020}]{Abramson20}
+{Abramson} L.~E.,  {Brammer} G.~B.,  {Schmidt} K.~B.,  {Treu} T.,  {Morishita}
+  T.,  {Wang} X.,  {Vulcani} B.,   {Henry} A.,  2020, \mn@doi [\mnras]
+  {10.1093/mnras/staa276}, \href
+  {https://ui.adsabs.harvard.edu/abs/2020MNRAS.tmp..279A} {}
+
 \bibitem[\protect\citeauthoryear{{Calzetti}, {Armus}, {Bohlin}, {Kinney},
   {Koornneef}  \& {Storchi-Bergmann}}{{Calzetti} et~al.}{2000}]{Calzetti00}
 {Calzetti} D.,  {Armus} L.,  {Bohlin} R.~C.,  {Kinney} A.~L.,  {Koornneef} J.,
@@ -26,6 +34,12 @@
 \bibitem[\protect\citeauthoryear{{Chabrier}}{{Chabrier}}{2003}]{Chabrier03}
 {Chabrier} G.,  2003, \mn@doi [\pasp] {10.1086/376392}, \href
   {http://adsabs.harvard.edu/abs/2003PASP..115..763C} {115, 763}
+
+\bibitem[\protect\citeauthoryear{{Conroy} \& {van Dokkum}}{{Conroy} \& {van
+  Dokkum}}{2012}]{Conroy12}
+{Conroy} C.,  {van Dokkum} P.,  2012, \mn@doi [\apj]
+  {10.1088/0004-637X/747/1/69}, \href
+  {http://adsabs.harvard.edu/abs/2012ApJ...747...69C} {747, 69}
 
 \bibitem[\protect\citeauthoryear{{Conroy}, {Gunn}  \& {White}}{{Conroy}
   et~al.}{2009}]{ConroyGunnWhite09}
@@ -53,6 +67,11 @@
   et~al.}{2019}]{Morishita19}
 {Morishita} T.,  et~al., 2019, \mn@doi [\apj] {10.3847/1538-4357/ab1d53}, \href
   {https://ui.adsabs.harvard.edu/abs/2019ApJ...877..141M} {877, 141}
+
+\bibitem[\protect\citeauthoryear{{Muzzin} et~al.,}{{Muzzin}
+  et~al.}{2013}]{Muzzin13}
+{Muzzin} A.,  et~al., 2013, \mn@doi [\apj] {10.1088/0004-637X/777/1/18}, \href
+  {http://adsabs.harvard.edu/abs/2013ApJ...777...18M} {777, 18}
 
 \bibitem[\protect\citeauthoryear{{Pacifici}, {Charlot}, {Blaizot}  \&
   {Brinchmann}}{{Pacifici} et~al.}{2012}]{Pacifici12}

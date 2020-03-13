@@ -234,17 +234,18 @@ the predicted spectra do not capture the likely enrichment history of any object
 
 All spectral templates were generated using Flexible Stellar Population Synthesis 
 \citep[FSPS;][]{ConroyGunnWhite09} assuming default abundance patterns. When inferring the SFHs, 
-these models---5 mass amplitudes + 5 $A_{V}$s + 1 metallicity + 1 redshift + 1 spectrophotometry fluxing 
-factor = 12 free parameters---were typically constrained by 7 + {\bfr $\sim$100} photometric + spectral 
-datapoints. The spectral models studied below are were regenerated using the best-fit SFH parameters
-at $R\sim800$ in the rest optical. Uncertainties are tabulated for the SFH bins but {\it not} propagated
-to the high resolution model spectra. As they therefore rely purely on data uncertainties, all comparisons 
-below should be regarded as conservative.
+these models---5 mass amplitudes + 5 $A_{V}$s + 1 metallicity + 1 redshift + {\bfr 1} spectrophotometry fluxing 
+factor + {\bfr N} emission line amplitudes = {\bfr XXX} free parameters---were typically constrained by 
+7 + {\bfr $\sim$100} photometric + spectral datapoints. The spectral models studied below are were 
+regenerated using the best-fit SFH parameters at $R\sim800$ in the rest optical. Uncertainties are tabulated
+for the SFH bins but {\it not} propagated to the high resolution model spectra. As they therefore rely purely on 
+data uncertainties, all comparisons below should be regarded as conservative.
 
 \subsection{High-resolution spectroscopy}
 \label{sec: hiRes}
 
-
+{\bfr We took high resolution data with IMACS. Dan will tell you all about it, including how many objects, 
+and a brief description of $S/N$/data quality/etc.}
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------
@@ -262,10 +263,88 @@ below should be regarded as conservative.
 \section{Implications}
 \label{sec:discussion}
 
+Our main finding is that spectral features only observable in costly, high-resolution spectroscopy
+are readily predicted by models fit to much cheaper broadband photometry and prism spectra. As
+such, obtaining the former seems irrelevant for investigators interested in inferring galaxy SFHs.
+
+This fact prompts two questions: (1) Why is this the case? (2) What are the extra pixels doing?
+These questions relate to the difference between formal and meaningful information content.
+
+\subsection{Spectral pixels are correlated}
+\label{sec:pixels}
+
+Regarding (1), the only answer can be that most of the pixels in high resolution spectra are
+not physically independent. This has been known for some time---Balmer line depths correlate
+with $B-V$ color or D4000, for example---but perhaps not fully appreciated. What we are
+finding here is that practically all of the line information is determined by some combiantion
+of local and remote parts of the continuum. That is, if the continuum is ``suitably'' sampled,
+it need not be ``well'' sampled. What ``suitably'' means in terms of the number and span
+of bandpasses necessary to predict spectral line depths to a given precision as a function of
+source redshift is a question much deserving of serious study. Whatever it is, the CSI SED 
+sampling meets or exceeds it at $z\lesssim1$, and a future paper will present evidence
+that one can do similarly well with the UltraVista 26-band filter set \citep{Muzzin13}.
+
+Regardless of what it is, however, the existence of a minimum-sampled SED suggests that 
+it is inappropriate to treat the pixels of more densely sampled data as independent in the
+context of SFH inferences. By treating each pixel as an additional degree of freedom and
+associated random uncertainty, one produces SFHs with formal uncertainties that in
+no way reflect physical uncertainties. Adding sources of systematics---which may correlate
+the pixels---should reinflate the resultant unreasonably small SFH uncertainties, but we
+are arguing (and a future paper will show) that even in the absence of systematics the
+extra pixels are providing apparent modeling constraints while having no physical
+discriminatory power. As such, they should not be treated as independent in terms of their
+constraints on SFHs.
+
+A likely corollary to the above is that wavelength baseline is key. Our results here suggest
+the high resolution details of the rest-optical if one has access, e.g., to infrared data. However,
+it is possible that the inverse is less true. Examining Figure 12 of \citet{Abramson20}, fits to
+low resolution rest-optical spectra like those from CSI used here do not predict, e.g., infrared
+broadband fluxes to the level the high resolution lines are reproduced here. If this statement
+were shown to hold using fits to the high resolution spectra also presented here, it would bear
+strongly on which kind of data is most critical to obtain for learning about SFHs. 
+
 \subsection{Where is the information going?}
 \label{sec:redshifts}
 
-Redshifts.
+The explicit science motivator for this study was inferring SFH, and, to a lesser extent, galaxy 
+enrichment histories, which we have shown are consistent with flat to {\bfr XXX\%}. However, 
+these are not the only applications for high resolution spectroscopy, and it is in other domains 
+where the extra pixels indeed play a role.
+
+The trivial instance of this is in measuring emission lines, where resolution is needed to 
+identify, e.g., embedded Balmer lines and detect subtle features like [\ion{O}{iii}] 
+$\lambda4363$ ({\bfr cite Sanders}). Especially at low $S/N$, each pixel definitely counts
+for these applications, and estimates of, e.g., nebular extinction, ISM metallicity, or outflow
+properties will improve with every additional datum.
+
+Another use that may have more bearing in the context of SFH reconstruction is in assessing
+stellar velocity dispersions. Here again, each additional sampling of the wing of a line increases
+the certainty on that parameter (at fixed $S/N$). This certainty is useful because velocity dispersions 
+are color-independent mass proxies; i.e., they are {\it truly} orthogonal to the information contained 
+in the SEDs of the stellar subpopulations into which one is attempting to decompose a galaxy's SED.
+They might thus provide strict mass limits that could breaking some of the degeneracies mentioned
+in Section \ref{sec:intro} of this text: If one knew a suitably tight relation between $\sigma$
+and $\Mstel$, one could apply it as a prior in the SED decomposition to constrain the
+amount of faint old stars that would imprint on the dispersion but perhaps not be detectable
+by their colors in the SED.
+
+Unfortunately, at {\bfr 0.2 dex?}, that relation likely has too much scatter to be useful. Further,
+allowances should be made that---due, e.g., to inside-out growth (\CITE), the existence of thick disks, 
+etc.---each stellar subpopulation has a different velocity dispersion, such the same degeneracies in
+decomposing the global $\sigma$ constraint into pieces arise as did with the SED. Both of these 
+effects would have to be marginalized over. While we do not know precisely how these effects 
+would modulate the utility of $\sigma$ as an SFH constraint, we would predict them to 
+substantially erode it.
+
+A yet more pertinent use would be to constrain the IMF \citep{Conroy12}. While doing so 
+would have no bearing on the relative accuracies of SFH inferences, it would allow all stellar 
+masses to be placed on a firmer absolute scale, which should enhance these objects power to test 
+simulations or first-principles theoretical predictions. Of course, if the IMF is allowed to vary with 
+time, one encounters the same problems as with $\sigma$.
+
+The real key is redshifts...
+
+%Redshifts, velocity dispersions, emission line details.
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------
@@ -273,11 +352,11 @@ Redshifts.
 \section{Summary}
 \label{sec:summary}
 
-Foo.\\
+
 
 \noindent\facilities\ Magellan/IMACS
 
-\noindent\software\ IDL (Coyote libraries; \url{http://www.idlcoyote.com/}), python (\texttt{CarPy}).
+\noindent\software\ Python (\texttt{CarPy}).%IDL (Coyote libraries; \url{http://www.idlcoyote.com/})
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------

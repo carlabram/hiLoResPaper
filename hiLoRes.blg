@@ -19,45 +19,45 @@ I was expecting a `,' or a `}'---line 12172 of file /Users/labramson/lit.bib
 I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 9 entries,
+You've used 12 entries,
             2881 wiz_defined-function locations,
-            811 strings with 11512 characters,
-and the built_in function-call counts, 4068 in all, are:
-= -- 350
-> -- 269
-< -- 12
-+ -- 121
-- -- 34
-* -- 540
-:= -- 621
+            838 strings with 12508 characters,
+and the built_in function-call counts, 5463 in all, are:
+= -- 442
+> -- 394
+< -- 18
++ -- 178
+- -- 54
+* -- 732
+:= -- 849
 add.period$ -- 0
-call.type$ -- 9
-change.case$ -- 18
-chr.to.int$ -- 9
-cite$ -- 9
-duplicate$ -- 197
-empty$ -- 199
-format.name$ -- 60
-if$ -- 689
+call.type$ -- 12
+change.case$ -- 24
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 263
+empty$ -- 264
+format.name$ -- 92
+if$ -- 914
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 9
-newline$ -- 40
-num.names$ -- 54
-pop$ -- 44
+missing$ -- 12
+newline$ -- 49
+num.names$ -- 74
+pop$ -- 59
 preamble$ -- 1
-purify$ -- 36
+purify$ -- 48
 quote$ -- 0
-skip$ -- 111
+skip$ -- 149
 stack$ -- 0
-substring$ -- 256
-swap$ -- 96
-text.length$ -- 36
+substring$ -- 304
+swap$ -- 134
+text.length$ -- 48
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 81
+type$ -- 108
 warning$ -- 0
-while$ -- 64
+while$ -- 84
 width$ -- 0
-write$ -- 102
+write$ -- 132
 (There were 3 error messages)
