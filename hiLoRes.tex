@@ -97,7 +97,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Who needs spectra?]{Spectral resolution is not important for modeling galaxy growth}
+\title[More is not better]{Spectral resolution is not important for modeling galaxy growth}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -127,17 +127,21 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 \begin{abstract}
 
 	We compare actual $R\sim{\bfr 800}$ spectroscopy to model predictions based on galaxy 
-	star formation histories (SFHs) inferred from much lower resolution data: $ugrizJK_{s}$ 
-	photometry and $R\sim25$ rest-optical prism spectra. From \ntot\ systems, we find a median 
-	difference of $\leq$1\% between all predicted and measured absorption features in the Lick index 
-	bandpasses except the Blamer lines---explainable by unmodeled emission---and Ca4227 and 
-	Fe5270 in {\it UVJ}-classified passive galaxies, which are 1.7\%--2.5\% weaker than expected. 
-	{\bfr $\chi^{2}$ stuff.} As such, absent a Ca-- or Fe--age prior accurate to the 2\% level---whose 
-	empirical apprehension is itself a motivation for SED fitting---we find no utility in adding 
-	high resolution spectroscopy as an SFH modeling constraint, at least when using models that capture 
-	the intrinsic diversity of real growth trajectories. Our results cast doubt on the extent to which 
-	spectra from the {\it James Webb Space Telescope} will enhance our understanding of galaxy 
-	growth and suggest that progress requires new tactics as much as new data.
+	star formation histories (SFHs) inferred from $R\sim25$ rest-optical prism spectra 
+	($3700\lesssim\lambda_{\rm rest}/\AA\lesssim5100$) and $ugrizJK_{s}$ photometry. 
+	From \ntot\ systems, we find a median difference of $\leq$1\% between all predicted and 
+	measured absorption features in the Lick index bandpasses except the Blamer lines---all 
+	explainable by unmodeled emission---and Ca4227 in {\it UVJ}-classified passive galaxies, 
+	which are 1.7\%--2.5\% weaker than expected. {\bfr $\chi^{2}$ stuff.}
+	These results hold using SFH models based on 5 age bins, or ones with hundreds of time steps. 
+	Therefore, absent a Ca--age prior accurate to $\sim$2\%---an object whose empirical apprehension 
+	is itself a motivation for this kind of modeling---we find no utility in adding high 
+	resolution spectroscopy as a {\it spectral energy distribution-related} SFH modeling 
+	constraint. Velocity dispersion-derived stellar mass constraints, may still prove useful, though
+	intrinsic scatter and systematics must be shown to be well controlled. Assuming such issues
+	remain, our results cast doubt on the extent to which spectra from the {\it James Webb 
+	Space Telescope} will enhance our understanding of galaxy growth, and suggest that progress 
+	requires new tactics more than new data.
 %	or a $\sigma_{v}-\Mstel$ prior with less than $\sim$0.2	dex of scatter
 %	By increasing the number of data points without adding meaningful physical details, such data 
 %	may in fact harm our understanding by unrealistically shrinking SFH uncertainties. 
@@ -170,7 +174,7 @@ are degenerate. Of course, those degeneracies are compounded by age-independent 
 and dust. 
 
 High resolution spectra ($R\sim500$--5000) are often used to alleviate those degeneracies in SFH model 
-fitting. The hope is that the absorption features that emerge in those data will increase the contrast 
+fitting. The hope is that the absorption features visible in those data will increase the contrast 
 between constituent stellar subpopulations, constrain metallicities, and yield more accurate 
 age/mass coefficients. The utility of these data is usually taken as axiomatic, but it is also testable. 
 
@@ -253,6 +257,12 @@ and a brief description of $S/N$/data quality/etc.}
 \section{Confronting predictions with high-resolution data}
 \label{sec:results}
 
+\begin{figure*}
+\includegraphics[width = \textwidth]{residuals}
+\caption{fit residuals, $H=1$ SFHs}
+\label{fig:resids}
+\end{figure*}
+
 \subsection{Systematic errors}
 \label{sec:systematics}
 
@@ -275,7 +285,7 @@ information content.
 \label{sec:pixels}
 
 Driving the outcomes we find is the reality that most of the pixels in high resolution 
-spectra are physically correlated, even if they are mathematically independent. This is obvious to 
+spectra are not physically independent, even if they are mathematically so. This is obvious to 
 some extent---Balmer line depths track $B-V$ or D4000---but we find that practically all of the 
 line information is determined by some (unknown) combination of the local and remote 
 continuum. These physical correlations should be mathematically accounted for in the SED 
