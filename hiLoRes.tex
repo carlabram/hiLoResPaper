@@ -137,7 +137,7 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 	Therefore, absent a Ca--age prior accurate to $\sim$2\%---an object whose empirical apprehension 
 	is itself a motivation for this kind of modeling---we find no utility in adding high 
 	resolution spectroscopy as a {\it spectral energy distribution-related} SFH modeling 
-	constraint. Velocity dispersion-derived stellar mass constraints, may still prove useful, though
+	constraint. Velocity dispersion-derived stellar mass constraints may still prove useful, though
 	intrinsic scatter and systematics must be shown to be well controlled. Assuming such issues
 	remain, our results cast doubt on the extent to which spectra from the {\it James Webb 
 	Space Telescope} will enhance our understanding of galaxy growth, and suggest that progress 
@@ -163,34 +163,44 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 \section{Introduction}
 \label{sec:intro}
 
-A central ambition of the study of galaxy evolution is to understand stellar mass growth; i.e., galaxy
-star formation histories (SFHs). Spectral energy distributions (SEDs) are the key data in this work because 
-they can be decomposed into combinations of distinct stellar subpopulations of known ages. The resulting 
-coefficients yield the amount of stellar mass a galaxy is inferred to have formed at the lookback time 
+A central ambition of the study of galaxy evolution is to understand stellar mass growth; i.e., 
+star formation histories (SFHs). Spectral energy distributions (SEDs) are key data in this work because 
+they can be decomposed into combinations of distinct stellar populations of known ages. The resulting 
+coefficients yield the stellar mass a galaxy can be said to have formed at the lookback time 
 corresponding to each subpopulation's age.
 	
-Different stellar subpopulations have different but not orthogonal SEDs. As such, galaxy decompositions 
-are degenerate. Of course, those degeneracies are compounded by age-independent effects like metallicity 
+Different stellar populations have different but not orthogonal SEDs. As such, galaxy decompositions 
+are degenerate. Those degeneracies are compounded by age-independent effects like metallicity 
 and dust. 
 
-High resolution spectra ($R\sim500$--5000) are often used to alleviate those degeneracies in SFH model 
-fitting. The hope is that the absorption features visible in those data will increase the contrast 
-between constituent stellar subpopulations, constrain metallicities, and yield more accurate 
-age/mass coefficients. The utility of these data is usually taken as axiomatic, but it is also testable. 
+High resolution spectra ($R\sim500$--5000) might alleviate those degeneracies 
+in SFH modeling---the absorption features visible in those data might increase the contrast 
+between stellar subpopulations, constrain metallicities, and yield more accurate 
+age/mass coefficients. However, we find that this is not the case.
 
-Here we present experiment that shows there is in fact little information in high resolution spectra
-that enhance constraints on galaxy SFHs compared to inferences based on a combination of broadband 
-photometry and low resolution ($R\sim25$) prism spectra.\footnote{A future paper will extend this statement 
-to pure photometry-based inferences.} We use precomputed SFH inferences based on such low resolution 
-SEDs for a set of \ntot\ systems at $\langle z\rangle=\midz$ to produce predictions 
-of each galaxy's high-resolution spectrum. We then compare those predictions to actual high resolution 
-($R\sim800$) observations taken post-facto. With the exception of the Balmer lines---whose divergence 
-from predictions is readily ascribable to emission line infilling---we find differences to be of order 
-{\bfr whatever they are}, suggesting {\bfr whatever we say they do}.
+In a simple experiment, we find that there is almost no color-related information in high resolution 
+spectra that enhance constraints on galaxy SFH inferences compared to using much lower
+resolution ($R\sim25$) prism spectra and broadband photometry.\footnote{A future paper will 
+extend this statement to pure photometry-based inferences.} The experiment is:
+\begin{itemize}
+	\item Derive SFHs from low-resolution SEDs;
+	\item Predict their high-resolution SEDs and compare to high-resolution data obtained 
+		post-facto ($R\sim800$).
+\end{itemize}
 
-Section \ref{sec:data} describes the data on which our experiment is based, Section \ref{sec:results} 
-shows the comparisons between our spectral predictions and the high resolution data, and Section
-\ref{sec:discussion} describes the implications of these results. We use AB magnitudes and assume 
+Based on \ntot\ systems at $\langle z\rangle=\midz$, we find high resolution data to differ from 
+low resolution model predictions at {\it less than 1\% for all but one} absorption feature in the 
+Lick index system \citep{Worthey94}. {\bfr This includes features outside the bandpass of the 
+low resolution prism data}. The lone exception is a Ca feature in {\it UVJ}-selected passive 
+galaxies \citep{Williams09} that is well known to be anomalous, where the line is $\sim2.5\%$ 
+weaker than expected. Absent a prior linking Ca to age accurate to that level, we conclude that there
+is no utility in using high resolution spectra for SFH inferences from a stellar population perspective. 
+Some utility may still be found in dynamical mass constraints such data provide, but that remains to be
+demonstrated.
+
+Section \ref{sec:data} describes the data for our experiment, Section \ref{sec:results} compares 
+our spectral predictions and the high resolution data, and Section \ref{sec:discussion} discusses 
+the implications of these results. We use AB magnitudes and assume 
 a \citet{Chabrier03} stellar initial mass function (IMF) with $(H_{0}, \Omega_{M}, \Omega_{\Lambda}) =
 (70~{\rm km~s^{-1}~Mpc^{-1}}, 0.3, 0.7)$ throughout.
 
