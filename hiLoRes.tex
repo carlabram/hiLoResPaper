@@ -198,9 +198,9 @@ colour-related SFH constraints. Such data are therefore unnecessary for SED deco
 However, if model-dependencies do not pose undue challenges, they may remain useful
 in providing kinematic total stellar mass constraints.
 
-Section \ref{sec:data} describes the data for our experiment, \ref{sec:results} compares 
-the spectral predictions to the high-resolution data, and \ref{sec:discussion} discusses 
-the implications of these results. We use AB magnitudes and assume 
+Section \ref{sec:data} describes the data for our experiment. Section \ref{sec:results} compares 
+the spectral predictions to the high-resolution data, with our key results in \ref{sec:upshot}. 
+Section \ref{sec:discussion} discusses implications. We use AB magnitudes and assume 
 a \citet{Chabrier03} stellar initial mass function (IMF) with $(H_{0}, \Omega_{M}, \Omega_{\Lambda}) =
 (70~{\rm km~s^{-1}~Mpc^{-1}}, 0.3, 0.7)$ throughout.
 
@@ -294,7 +294,8 @@ Figure \ref{fig:sample} shows the distributions in {\bfr stellar mass, {\it UVJ}
 and inferred half-mass time} of the sample objects.
 
 \begin{figure}
-	\includegraphics[width=\columnwidth]{residuals}
+	\centering
+	\includegraphics[width = \columnwidth, trim=1cm 0.7cm 0cm 0cm]{context}
 	\caption{\bfb Some heuristic/contextual map of the sample data to orient the reader: UVJ plot, 
 			$\Mstel$ histogram, half-mass time histogram, or all of the above. I don't want to 
 			clutter any of the subsequent plots with this stuff.}
@@ -323,9 +324,11 @@ I assume the same photometry was used to flux both the prism data and the high-r
 just have to explain it.}
 
 \subsection{Experimental setup}
+\label{sec:setup}
 
-\begin{figure*}[t!]
-	\includegraphics[width=\textwidth]{residuals}
+\begin{figure*}
+	\centering
+	\includegraphics[width=\textwidth]{scheme}
 	\caption{\bfb A 3-panel figure---2 top + 1 bottom. At top, show D18-like figures of the CSI
 			data + SFH reconstructions for one object. I don't think we need to show the spectral
 			sub-components for the chunky fit; just the best fit low-res SED and SFH. Other parameters
@@ -372,7 +375,8 @@ We then compute {\bfr$\Delta$} for each Lick bandpass in each galaxy.
 that we calculate global $\chi^{2}$ values and point to where we'll discuss those.}
 
 \begin{figure}
-	\includegraphics[width=\columnwidth]{residuals}
+	\centering
+	\includegraphics[width = \columnwidth]{metric}
 	\caption{\bfb A graphic example of how we calculate whatever residuals we illustrate
 			in Figure \ref{fig:resids}. Could be 2 panels, one showing the raw line + model,
 			another showing the residuals. Could be 1 panel split in half. Could be for one
@@ -386,20 +390,22 @@ that we calculate global $\chi^{2}$ values and point to where we'll discuss thos
 
 \begin{table*}
 	\centering
-	\caption{Summary of experimental results. Mean equivalent widths are quoted for the full sample.}
+	\caption{Summary of experimental results. Mean equivalent widths are quoted for the full sample.
+			{\bfr Asterisks denote feature outside the CSI prism wavelength coverage.}}
 	\label{tbl:stats}
 	\begin{tabular}{ccccccc} % four columns, alignment for each
 		\hline
 	Feature & Band center [\AA] & Bandwidth [\AA] & $\langle{\rm EW}\rangle$ [\AA] & 
 	Full sample offset [\%] & {\bfr Red} sample offset [\%] & {\bfr Blue} sample offset [\%]\\
 		\hline
+	CaHK & {\bfr LAMBDA} & {\bfr LAMBDA}\\
 	CN$_{1}$    & 4159 & 35\\
 	Ca4227 & 4228 & 12\\
 	G4300  & 4298 & 35\\
 %	Fe4383 & 4394 & 51\\
 %	Ca4455 & 4463 & 22\\
 	Fe4531 & 4536 & 45\\
-	C$_{2}$4668 & 4677 & 86\\
+	C$_{2}$ 4668 & 4677 & 86\\
 %	Fe5015 & 5015 & 76\\
 	Mg{\it b}    & 5176 & 32\\
 	Fe5270 & 5265 & 40\\
@@ -425,17 +431,19 @@ that we calculate global $\chi^{2}$ values and point to where we'll discuss thos
 %%%
 
 \subsection{Sample-wide outcomes}
+\label{sec:upshot}
 
-Figure \ref{fig:resids} summarizes the quality of our model predictions across the entire sample of
-\ntot\ objects; i.e., the overall outcome of our experiment. Results from Techniques 1 and 2 are shown
-in the top and bottom panels, \resp. At the central wavelength of each feature, we show the median, and
-16th and 84th percentile offsets in a given sample. Results based on the full sample are shown in black, 
-with red and blue boxes denoting {\bfr SFR- or age-defined} subsamples, \resp. The width of each box 
-corresponds to the width of that feature's Lick bandpass. Regimes outside the original prism wavelength 
-range are highlighted {\bfr in some color}. The dashed and dotted horizontal lines \resp\ benchmark 
-mismatches at the $\pm$1\% and $\pm$2\% level.
+Figure \ref{fig:resids} and Table \ref{tbl:stats} summarize the quality of our model predictions 
+across the entire \ntot\ object sample; i.e., the overall outcome of our experiment. In the figure, 
+results from Techniques 1 and 2 are shown in the top and bottom panels, \resp. At the central 
+wavelength of each feature, we show the median, and 16th and 84th percentile offsets in a given sample. 
+Results based on the full sample are shown in black, with red and blue boxes denoting 
+{\bfr SFR- or age-defined} subsamples, \resp. The width of each box corresponds to the width of 
+that feature's Lick bandpass. Regimes outside the original prism wavelength range are highlighted 
+{\bfr in some color}. The dashed and dotted horizontal lines \resp\ benchmark mismatches at the 
+$\pm$1\% and $\pm$2\% level.
 
-From Figure \ref{fig:resids}, it is clear that {\it almost all rest-optical galaxy absorption features 
+Clearly, {\it almost all rest-optical galaxy absorption features 
 visible at $R\sim800$ are predictable to better than 1\% by models tuned to data with $\sim$30$\times$
 lower resolution.} That is, to a very high degree of accuracy, one can infer the strengths of nearly all 
 major optical stellar absorption features in integrated galaxy spectra without ever detecting any of them.
@@ -468,12 +476,14 @@ any prior would have to be accurate to better than 2\% in the mean for this rela
 \end{figure*}
 
 \subsection{The Balmer lines}
+\label{sec:balmer}
 
 Figure \ref{fig:balmer} shows the same offset summaries as Figure \ref{fig:resids} but for the three
 strong Balmer lines in the prism data: 
 
 \begin{figure}
-\includegraphics[width = \linewidth]{residuals}
+\centering
+\includegraphics[scale = 0.9, trim = 1cm 0cm 0cm 0cm]{balmer}
 \caption{Balmer lines; same styling as Figure \ref{fig:resids}.}
 \label{fig:balmer}
 \end{figure}
