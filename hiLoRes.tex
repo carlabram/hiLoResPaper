@@ -61,10 +61,11 @@
 \newcommand{\LCDM}{$\Lambda$CDM}
 \newcommand{\resp}{respectively}
 \newcommand{\bfr}{\bf\color{red}}
+\definecolor{myblue}{rgb}{0.85, 0.0, 0.85}
 \newcommand{\bfb}{\color{myblue}}
-\newcommand{\bfnull}{\color{black}}
-\newcommand{\bfc}{\sf\color{myblue}}
-\newcommand{\bfp}{\bf\color{magenta}}
+%\newcommand{\bfnull}{\color{black}}
+%\newcommand{\bfc}{\sf\color{myblue}}
+%\newcommand{\bfp}{\bf\color{magenta}}
 \newcommand{\ssfr}{{\rm sSFR}}
 \newcommand{\sfr}{{\rm SFR}}
 \newcommand{\tobs}{t_{\rm obs}}
@@ -97,8 +98,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[More is not better]{High resolution spectroscopy is not needed for modeling
-					galaxy star formation histories}
+\title[More is not better]{Spectral resolution is not important for modeling star formation histories}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -287,7 +287,7 @@ prompted us to obtain higher resolution spectroscopy to crosscheck and further i
 %were obtained for a subset of both late blooming and non late blooming galaxies
 %at $z\sim0.7$, or $\tobs\sim7$ Gyr.
 
-{\bfr High resolution---$R\sim800$---rest-optical spectra were obtained with Magellan-IMACS in DATES. 
+{\bfr We obtained high-resolution---$R\sim800$---rest-optical spectra with Magellan-IMACS in DATES. 
 Dan will tell you all about it, including how many objects, and a brief description of $S/N$/data quality/etc.}
 
 Figure \ref{fig:sample} shows the distributions in {\bfr stellar mass, {\it UVJ} colour-colour space, 
@@ -295,7 +295,9 @@ and inferred half-mass time} of the sample objects.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{residuals}
-	\caption{}
+	\caption{\bfb Some heuristic/contextual map of the sample data to orient the reader: UVJ plot, 
+			$\Mstel$ histogram, half-mass time histogram, or all of the above. I don't want to 
+			clutter any of the subsequent plots with this stuff.}
 	\label{fig:sample}
 \end{figure}
 
@@ -305,33 +307,47 @@ and inferred half-mass time} of the sample objects.
 \section{Confronting predictions with high-resolution data}
 \label{sec:results}
 
-Here we compare the model spectra generated using either the maximum-likelihood set of SFH 
-parameters from Technique 1 (Section \ref{sec:blocks}) or $H=1$ track and corresponding 
-parameters from Technique 2 (\ref{sec:h1}). Uncertainties are tabulated for the SFHs and parameters 
-in both techniques, but not propagated to the corresponding high-resolution spectral predictions. 
-Combined with the fact that both SFH reconstruction techniques assume an age-independent 
-metallicity, the experiment below is biased {\it towards} revealing significant differences between 
-the high-resolution spectra and the model predictions: the latter are less flexible than they could 
-be and given greater credence than they should be.
+Here we compare the model high-resolution spectra generated from the SFHs inferred using 
+Techniques 1 and 2 (Sections \ref{sec:blocks}, \ref{sec:h1}) to actual high-resolution spectra taken for
+the same objects. We study the model spectrum corresponding to
+the maximum-likelihood SFH fits. Uncertainties are tabulated for the SFHs and attendant 
+parameters, but not propagated into to the high-resolution spectral models. As such,
+the comparisons below treat the predictions as more credibility than they are. Combined with the fact 
+that the model metallicities are age-independent, this biases our experiment {\it towards} 
+revealing significant differences between the data and the predictions. Any offsets we find---in units
+of flux or standard deviations---are therefore likely to be closer to upper limits. %: the latter are less flexible than they could be and given greater credence than they should be.
 
-{\bfr LEA -- some note here about whether we're going to focus on the full spectrum or just the ``line
+{\bfb LEA -- some note here about whether we're going to focus on the full spectrum or just the ``line
 strengths.'' The latter is justified because it's the real value-add of the high-res data, and also because
 I assume the same photometry was used to flux both the prism data and the high-res spectra. We
 just have to explain it.}
 
 \subsection{Experimental setup}
 
-Figure \ref{fig:scheme} {\bfr (3 panels?)} outlines the experiment. The {\bfr top} panels show the
+\begin{figure*}[t!]
+	\includegraphics[width=\textwidth]{residuals}
+	\caption{\bfb A 3-panel figure---2 top + 1 bottom. At top, show D18-like figures of the CSI
+			data + SFH reconstructions for one object. I don't think we need to show the spectral
+			sub-components for the chunky fit; just the best fit low-res SED and SFH. Other parameters
+			at Dan's discretion, but they shouldn't clutter anything up; the key is the low-res SED.
+			At bottom, show the full IMACS high-res spectrum for the same object and overlay the
+			matched-resolution predictions from both SFH reconstruction techniques. Whatever
+			colors we use here we'll stick with for the rest of the paper. The object probably should
+			be like SA-type; nice absorption, some emission.}
+	\label{fig:scheme}
+\end{figure*}
+
+Figure \ref{fig:scheme} {\bfb (LEA -- 3 panels?)} outlines the experiment. The {\bfr top} panels show the
 CSI spectrophotometry for a galaxy at redshift {\bfr ZZZ}, along with its inferred SFH using Technique 
 1 (left) and 2 (right). The CSI data have broad wavelength 
 coverage and dense but low-resolution sampling over the rest optical. As such, they reflect a relatively
-complete accounting of a galaxy's stellar photospheric continuum emission. That said, 
-the strongest/broadest absorption features---such as the Mg triplet at 5170\,\AA---are sometimes
-identifiable.
+complete accounting of a galaxy's stellar photospheric continuum emission. With the exception of the
+strongest/broadest absorption features---e.g., H$\beta$; the Mg $\lambda$5170 triplet---these data are 
+insensitive to spectral lines and any historical information they might convey.
 
 Figure \ref{fig:scheme}, {\bfr bottom}, shows the complete high-resolution IMACS spectrum of 
 this object with the matched-resolution spectral predictions from the SFHs in the top panels overlaid. 
-Results from Technique 1 and 2 are in {\bfr color 1} and {\bfr color 2}, \resp. 
+Results from Techniques 1 and 2 are in {\bfr color 1} and {\bfr color 2}, \resp. 
 
 The data in the two top panels are identical; only the models change from left to right. Likewise,
 both model predictions are compared to the same $R\sim800$ IMACS data. We therefore perform two 
@@ -341,9 +357,9 @@ technique (Sections A, B, C), but these are ancillary to our main point.}
 
 Figure \ref{fig:metric} illustrates how we compare our spectral predictions to the high-resolution data.
 Here, we re-present Figure \ref{fig:scheme}, bottom, zoomed-in to the region surrounding {\bfr FEATURE}.
-{\bfr If we need to divide one by the other, we'll make this 2 panels.} The central bandpass of the corresponding
-Lick index is shown in {\bfr however} (\CITE). We define the mismatch between prediction and high-resolution
-data as:
+{\bfb LEA -- If we need to divide the data by the model, we'll make this 2 panels.} The central 
+bandpass of the corresponding Lick index is shown in {\bfr however we show it} (\CITE). We define 
+the mismatch between prediction and high-resolution data as:
 \begin{equation}
 	\Delta = {\rm whatever~Dan~says}.
 \end{equation}
@@ -352,40 +368,42 @@ offset integrated over however many angstroms, or whatever Dan did.}
 
 We then compute {\bfr$\Delta$} for each Lick bandpass in each galaxy.
 
-\begin{figure}
-	\includegraphics[width=\columnwidth]{residuals}
-	\caption{}
-	\label{fig:scheme}
-\end{figure}
+{\bfb LEA -- Here is where we talk about limiting ourselves to a comparison in the lines or mention
+that we calculate global $\chi^{2}$ values and point to where we'll discuss those.}
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{residuals}
-	\caption{}
+	\caption{\bfb A graphic example of how we calculate whatever residuals we illustrate
+			in Figure \ref{fig:resids}. Could be 2 panels, one showing the raw line + model,
+			another showing the residuals. Could be 1 panel split in half. Could be for one
+			object, or the full sample with the average models overlaid. Can just pick one
+			SFH technique.}
 	\label{fig:metric}
 \end{figure}
 
-\subsection{Sample-wide outcome}
+\subsection{Sample-wide outcomes}
 
 Figure \ref{fig:resids} summarizes the quality of our model predictions across the entire sample of
-\ntot\ objects. The top panel shows results based on Technique 1, the bottom Technique 2. The centerline
-of each box shows the median offset across the sample for each feature with the upper and lower boundaries
-showing the 16th and 84th percentiles. Results based on the full sample are in black, with red and blue 
-boxes denoting {\bfr SFR- or age-defined} subsamples. The width of each box corresponds to the width 
-of each feature's bandpass. Regimes outside the original prism wavelength range are highlighted 
-{\bfr in some color}, and the dashed and dotted horizontal lines \resp\ denote mismatches at the 
-1\% and 2\% level.
+\ntot\ objects; i.e., the overall outcome of our experiment. Results from Techniques 1 and 2 are shown
+in the top and bottom panels, \resp. At the central wavelength of each feature, we show the median, and
+16th and 84th percentile offsets in a given sample. Results based on the full sample are shown in black, 
+with red and blue boxes denoting {\bfr SFR- or age-defined} subsamples, \resp. The width of each box 
+corresponds to the width of that feature's Lick bandpass. Regimes outside the original prism wavelength 
+range are highlighted {\bfr in some color}. The dashed and dotted horizontal lines \resp\ benchmark 
+mismatches at the $\pm$1\% and $\pm$2\% level.
 
-From Figure \ref{fig:resids}, it is clear that {\it almost all rest-optical absorption features in galaxy 
-spectra visible in high-resolution data are predicted to better than 1\% by models that make no reference
-to such data.} That is, to a very high degree of accuracy, one can infer the strengths of all optical
-stellar absorption features without ever actually detecting any of them.
+From Figure \ref{fig:resids}, it is clear that {\it almost all rest-optical galaxy absorption features 
+visible at $R\sim800$ are predictable to better than 1\% by models tuned to data with $\sim$30$\times$
+lower resolution.} That is, to a very high degree of accuracy, one can infer the strengths of nearly all 
+major optical stellar absorption features in integrated galaxy spectra without ever detecting any of them.
 
-This statement holds to better than 1.5\% across the entire sample, and indeed better than 1\% for any 
-feature in any subsample except one. {\bfr State mean total offsets for both types.} It holds irrespective 
-of the feature's width---{\bfr basic quantification}---and irrespective of the chemical species from which 
-the feature derives. It holds for strong features---e.g., the G band in passive objects {\bfr quote mean
-EW}---and weak ones---e.g., Mg{\it b} in starforming ones {\bfr quote mean EW}. Quite simply: we 
-knew what the fluxes of each \AA\ in the high-resolution spectra would be well before we took the data.
+This statement holds to better than 1\% for any feature in any subsample except one. 
+{\bfr State mean total offsets for both types.} It holds irrespective of the feature's 
+width---{\bfr basic quantification}---and irrespective of the chemical species it traces. 
+It holds for strong features---e.g., the G band in passive objects {\bfr quote mean
+EW}---and weak ones---e.g., Mg{\it b} in starforming ones {\bfr quote mean EW}. Simply: we 
+knew what the fluxes of each \AA\ of our high-resolution spectra would be well before we got to the
+telescope.
 
 The lone exception to the above is CA4227 in {\bfr passive}, but not starforming galaxies. {\bfr Something 
 about the history of this line being anomalous.} We believe the relatively large extent of the mismatch we 
@@ -396,16 +414,23 @@ any prior would have to be accurate to better than 2\% in the mean for this rela
 
 \begin{figure*}
 \includegraphics[width = \textwidth]{residuals}
-\caption{fit residuals, $H=1$ SFHs}
+\includegraphics[width = \textwidth]{residuals}
+\caption{\bfb Main plot, only the absorption features (no Balmers), Technique 1 at top and 2 below.
+		I think we should look at versions highlighting any ranges outside the prism bandpass 
+		(at the median or $N$th percentile redshift or whatever) and also see what happens when
+		the individual residuals are lightly traced in grey or something. We also need to determine
+		how we'll split the data (UVJ or (N)LB); if we go w/ UVJ perhaps we can add the LB/NLB
+		version in an Appendix. I think we should also shrink the vertical scale to $\pm$5\%.}
 \label{fig:resids}
 \end{figure*}
 
 \subsection{The Balmer lines}
 
-Figure \ref{fig:balmer} 
+Figure \ref{fig:balmer} shows the same offset summaries as Figure \ref{fig:resids} but for the three
+strong Balmer lines in the prism data: 
 
 \begin{figure}
-\includegraphics[width = \textwidth]{residuals}
+\includegraphics[width = \linewidth]{residuals}
 \caption{Balmer lines; same styling as Figure \ref{fig:resids}.}
 \label{fig:balmer}
 \end{figure}
