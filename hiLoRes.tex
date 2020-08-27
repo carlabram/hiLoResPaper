@@ -398,13 +398,16 @@ that we calculate global $\chi^{2}$ values and point to where we'll discuss thos
 	\caption{Summary of experimental results. Mean equivalent widths are quoted for the full sample.
 			{\bfr Asterisks denote feature outside the CSI prism wavelength coverage.}}
 	\label{tbl:stats}
-	\begin{tabular}{ccccccc} % four columns, alignment for each
+	\begin{tabular}{cccccccccc} % four columns, alignment for each
 		\hline
 	Feature & Band center [\AA] & Bandwidth [\AA] & $\langle{\rm EW}\rangle$ [\AA] & 
-	Full sample offset [\%] & {\bfr Red} sample offset [\%] & {\bfr Blue} sample offset [\%]\\
+	\multicolumn{2}{c}{Full sample offset [\%]} & 
+	\multicolumn{2}{c}{{\bfr Red} sample offset [\%]} & 
+	\multicolumn{2}{c}{{\bfr Blue} sample offset [\%]}\\
+	& & & & Tech.~1 & Tech.~2 & Tech.~1 & Tech.~2 & Tech.~1 & Tech.~2\\
 		\hline
 	CaHK & {\bfr LAMBDA} & {\bfr LAMBDA}\\
-	CN$_{1}$    & 4159 & 35\\
+	CN$_{1}$    & 4159 & 35 & foo & foo & foo & foo & foo & foo & foo \\
 	Ca4227 & 4228 & 12\\
 	G4300  & 4298 & 35\\
 %	Fe4383 & 4394 & 51\\
@@ -538,7 +541,7 @@ information can be exploited to enhance SFH estimates (Section \ref{sec:discussi
 %lines. This is true up to odd abundance patterns, which may or may not be useful as 
 %SFH priors.}
 
-Figure \ref{fid:disp} illustrates the sample's velocity dispersion estimates. Here, we show {\bfr what 
+Figure \ref{fig:disp} illustrates the sample's velocity dispersion estimates. Here, we show {\bfr what 
 we show} for galaxies split by their inferred growth histories. {\bfr LBs show behavior X while NLBs
 show behavior Y.} %While more data is needed to say for certain, these trends suggest a link
 %between age and velocity dispersion may provide a new and useful lever for SFH inferences.
@@ -586,9 +589,10 @@ Here's the way this should go:
 
 Our experiments directly imply that high resolution optical spectroscopy does not meaningfully 
 enhance knowledge of underlying stellar populations compared to much more coarsely and broadly 
-sampled datasets. That is, absorption line strengths are correlated to stellar continua on large scales, 
-such that that capturing the details of the latter across a sufficient wavelength range yields the same 
-information more cheaply than dense sampling of the rest optical. There is therefore no need to obtain 
+sampled datasets. That is, absorption line details---{\it at least once convolved by a galaxy's velocity 
+dispersion}---are sufficiently correlated to stellar continua on large scales that capturing the details 
+of the latter across a large enough wavelength range yields the same information more cheaply than 
+densely sampling the rest optical. There is therefore no need to obtain 
 costly, high resolution spectroscopy for SFH inferences.\footnote{A future 
 paper will show that, at $z\sim0.4$, the 26-band UltraVista filter set \citep{Muzzin13} performs 
 similarly to CSI, meaning that even the prism data used here is likely oversampled.}
