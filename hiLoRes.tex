@@ -538,6 +538,18 @@ information can be exploited to enhance SFH estimates (Section \ref{sec:discussi
 %lines. This is true up to odd abundance patterns, which may or may not be useful as 
 %SFH priors.}
 
+Figure \ref{fid:disp} illustrates the sample's velocity dispersion estimates. Here, we show {\bfr what 
+we show} for galaxies split by their inferred growth histories. {\bfr LBs show behavior X while NLBs
+show behavior Y.} %While more data is needed to say for certain, these trends suggest a link
+%between age and velocity dispersion may provide a new and useful lever for SFH inferences.
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9, trim = 1cm 0cm 0cm 0cm]{disp}
+\caption{\bfb Show $\sigma$ distributions or $\sigma$--$\Mstel$ for LB/NLB objects.}
+\label{fig:disp}
+\end{figure}
+
 The last systematic is mismatches in the stellar continuum. {\bfb LEA -- see note above.}
 
 \if0
@@ -560,7 +572,7 @@ Here's the way this should go:
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------
 
-\section{Implications}
+\section{Discussion}
 \label{sec:discussion}
 
 %\benum
@@ -569,8 +581,8 @@ Here's the way this should go:
 %\eenum
 
 
-%\subsection{Spectral pixels are correlated}
-%\label{sec:correlation}
+\subsection{Implications for direct SFH inference}
+\label{sec:sedMap}
 
 Our experiments directly imply that high resolution optical spectroscopy does not meaningfully 
 enhance knowledge of underlying stellar populations compared to much more coarsely and broadly 
@@ -634,13 +646,13 @@ which of course could also be coupled to machine learning.
 %do quite well in some systems. Of course, this exercise could also be coupled to machine learning.
 
 Based on our results, however, similar exercises performed using only photometry 
-(Abramson in preparation), and indeed the physics at play, we suspect that full UV--IR 
-wavelength coverage dictates the underlying structure of the mapping, or at least points
-to interpolations into the optical being more accurate than extrapolations from the optical
-to other regimes. If all of the starlight is captured, the density of the sampling---provided 
-it is above some threshold---becomes secondary. It may remain easier to take multiplexed 
-prism spectra of a field than a dozen bands worth of photometry, but it may yet represent 
-oversampling.
+(Abramson in preparation), and the physics at play, we suspect that full UV--IR 
+wavelength coverage will be one of the foundations whatever map is finally produced: If all of 
+the starlight is captured, the density of the sampling is secondary (provided it is sufficient
+to obtain accurate redshifts). Future surveys designed to support SFH reconstruction should 
+therefore opt for increased wavelength coverage at the expense of SED resolution. 
+%It may remain easier to take multiplexed prism spectra 
+%than a dozen bands worth of photometry, but it probably still represent oversampling.
 
 %We suspect 
 %that wavelength baseline is the underlying key to SED fitting. To test this, one could derive
@@ -661,15 +673,17 @@ oversampling.
 %precision on the continuum, you have the same purchase on the metallicity as you would if you 
 %had all the lines. 
 
-The above is all true up to, e.g., understanding the IMF \citep{Conroy12}, and abundance 
-patterns. In and only in the context of Ca in passive galaxies, we find that the high resolution 
-data are adding more information than anywhere else. That said, while the prediction/data
-mismatches are large in a relative sense---2$\times$ the average offset---they are small, 
-absolutely. As such, in order to enhance SFH predictions, priors linking the abundances
-of such species to age must be accurate to almost the percent level. We believe traveling down
-that road is an endeavor of diminishing returns, especially as---at least in the case of 
-calcium---the abundance information is tied to much more readily observable properties, 
-such as environmental density (\CITE).
+Of course, we are not asserting that there is never a reason to take high resolution spectra. If 
+one is interested in understanding the IMF \citep{Conroy12}, or specific abundance 
+patterns, it is necessary. We only argue that it seems unreasonable for these investigations to
+qualitatively enhance assessments of galaxy growth. For example, it is clear that calcium strengths
+add a relatively large amount of information to our predictions in passive galaxies. However,
+while the prediction/data mismatches are $\times$ the average offset, they are still only absolutely
+at the 2\% level. As such, to enhance SFH predictions, priors linking Ca abundance to age must 
+be accurate to at least that level. We believe attempting to construct such an object is an endeavor 
+of diminishing returns: aperture and other observational effects surely swamp such precision, and
+ as---in the case of calcium---other, more easily observed properties---such as environmental 
+ density (\CITE)---are almost certainly equally good candidates for an age prior.
 
 %This fact prompts three questions: (1) Why? (2) What are the extra pixels doing? (3) What does
 %this mean for the future? All of these relate to the difference between formal and meaningful 
@@ -695,67 +709,66 @@ that we have already reached that floor.
 %predict SFHs to a given precision as a function of redshift 
 %though it is very different from the question of ``What is a galaxy's SFH?'' 
 
-\subsection{Resolution is for Doppler information}
+\subsection{Prospects for exploiting Doppler information}
 \label{sec:redshifts}
 
-Indirectly, however, high resolution spectroscopy yields unique insight into velocity space, and therefore
-galaxy kinematics. As such, SFH reconstruction might benefit from the colour-independent 
-mass constraints these data provide, not their fine-graining of galaxy colours. If so, they could be much
-more cheaply incorporated into modeling efforts than they are currently.
+The one area where high resolution spectroscopy yields unique insight is velocity space. Since
+galaxy kinematics can be inferred from line profiles, it's tempting to contemplate using these data
+to place colour-independent total stellar mass priors on SED fits to data of any resolution. This
+move is especially appealing as it would provide a handle on faint/old stars that might imprint on 
+a galaxy's velocity dispersion the dispersion but remain undetectable in its SED. 
 
-We now discuss these points in turn.
+Unfortunately, a number of complications suggest that doing so would not significantly improve
+current methods.
 
-The explicit science motivator for this study was inferring SFH, and, to a lesser extent, galaxy 
-enrichment histories, which we have shown are consistent with flat to {\bfr XXX\%}. However, 
-these are not the only applications for high resolution spectroscopy, and it is in the Doppler
-domain where the extra pixels play a key role.
+The prior would most readily enter through a $\sigma$--$\Mstel$ relation. The intrinsic scatter
+of this relation is $\sim$0.2 dex (\CITE), much broader than the formal---or even systematic---errors 
+on SED-inferred stellar masses ({\bfr quote what we find; systematics as cross-method or duplicate
+obs deifferences}). Further, that relation would be calibrated to stellar masses suffering the same 
+systematic error one seeks to correct in one's own SED fitting. Theoretically, a $\sigma$--S\'{e}rsic 
+index--color relation could be used, but this entails its own systematics in terms of spatial resolution, 
+aperture matching, and dust effects. Finally, due, e.g., to inside-out growth (\CITE) 
+and the existence of thick disks, each stellar subpopulation may contribute its own velocity 
+dispersion to the global profile. If so, modeling this will re-introduce exactly that the same 
+degeneracies in line decomposition as arose as in SED decomposing. These 
+effects would have to be marginalized over the systematics from failing to do so would have to
+be understood.
 
-Redshift assessment is the obvious example. We discussed the average redshift offset between
-our low resolution inferences and high resolution data in Section \ref{sec:systematics}. It is
-doubtful that SFH properties covary with redshift errors at that level in general, but it may in 
-some cases. At CSI's spectral resolution, for example, [\ion{O}{ii}] $\lambda 3727$ is 
-almost indistinguishable from the Balmer break. While the break has substantial leverage 
-on the SFH, [\ion{O}{ii}] has none. Aliasing the line as a break would inflate the number 
-of A stars above what is real and bias the SFH inference towards that age range. 
+While we are bearish on the ultimate utility of incorporating kinematic stellar mass constraints, 
+we are also unaware of any SFH modeling that has attempt it. A small study assessing its 
+practicality and real-word effects would therefore be edifying.
 
-We do not 
-find this to be a problem ({\bfr see Figures XXX?}), but were also able to perform accurate
-emission line modeling. That may not be the possible in ever more ubiquitous slitless 
-spectroscopy from HST and JWST, and so may be more a problem in the future.
+%
+%We now discuss these points in turn.
+%
+%The explicit science motivator for this study was inferring SFH, and, to a lesser extent, galaxy 
+%enrichment histories, which we have shown are consistent with flat to {\bfr XXX\%}. However, 
+%these are not the only applications for high resolution spectroscopy, and it is in the Doppler
+%domain where the extra pixels play a key role.
+%
+%Redshift assessment is the obvious example. We discussed the average redshift offset between
+%our low resolution inferences and high resolution data in Section \ref{sec:systematics}. It is
+%doubtful that SFH properties covary with redshift errors at that level in general, but it may in 
+%some cases. At CSI's spectral resolution, for example, [\ion{O}{ii}] $\lambda 3727$ is 
+%almost indistinguishable from the Balmer break. While the break has substantial leverage 
+%on the SFH, [\ion{O}{ii}] has none. Aliasing the line as a break would inflate the number 
+%of A stars above what is real and bias the SFH inference towards that age range. 
+%
+%We do not 
+%find this to be a problem ({\bfr see Figures XXX?}), but were also able to perform accurate
+%emission line modeling. That may not be the possible in ever more ubiquitous slitless 
+%spectroscopy from HST and JWST, and so may be more a problem in the future.
+%
+%Velocity dispersion are the more interesting example. High resolution is clearly needed to
+%accurately infer this information, and it is indirectly related to the SFH through a galaxy's
+%total stellar mass. Indeed, in principle, absent lensing, velocity dispersions are the only
+%colour-independent mass estimators available. They are thus potentially powerful constraints
+%even when their uncertainties are large.
+%
 
-Velocity dispersion are the more interesting example. High resolution is clearly needed to
-accurately infer this information, and it is indirectly related to the SFH through a galaxy's
-total stellar mass. Indeed, in principle, absent lensing, velocity dispersions are the only
-colour-independent mass estimators available. They are thus potentially powerful constraints
-even when their uncertainties are large.
-
-As such, the $\sigma$--$\Mstel$ relation could be applied as a prior in the SED fitting to 
-condition to total mass, and therefore constrain the amount of faint/old 
-stars that would imprint on the dispersion but perhaps not be detectable in the SED.
-
-We are unaware of any SFH modeling that has incorporated or applied such a prior, but
-it should be explored. Unfortunately, at {\bfr 0.2 dex?}, the relation is probably not tight 
-enough to be decisive, but, if colour or structural subclasses are considered---it may help. 
-
-Figure \ref{fid:disp} shows an example of one potential application. Here, we show {\bfr what 
-we show} for galaxies split by their inferred growth histories. {\bfr LBs show behavior X while NLBs
-show behavior Y.} While more data is needed to say for certain, these trends suggest a link
-between age and velocity dispersion may provide a new and useful lever for SFH inferences.
-
-\begin{figure}
-\centering
-\includegraphics[scale = 0.9, trim = 1cm 0cm 0cm 0cm]{disp}
-\caption{\bfb Show $\sigma$ distributions or $\sigma$--$\Mstel$ for LB/NLB objects.}
-\label{fig:disp}
-\end{figure}
-
-Of course, ultimately, familiar systematics will enter: due, e.g., to inside-out growth (\CITE) 
-and the existence of thick disks, each stellar subpopulation will have its own velocity 
-dispersion buried in the global profile, such that the same degeneracies in decomposing 
-line profiles arise as in decomposing SEDs (they are indeed tied 1:1). These 
-effects would have to be marginalized over or the systematics from failing to do so studied.
-However, if they do not substantially erode the utility of the $\sigma$--$\Mstel$ constraint,
-high resolution data may meaningfully improve SFH reconstructions in at least some cases. 
+%We are unaware of any SFH modeling that has incorporated or applied such a prior, but
+%it should be explored. Unfortunately, at {\bfr 0.2 dex?}, the relation is probably not tight 
+%enough to be decisive, but, if colour or structural subclasses are considered---it may help. 
 
 %Principle among these in terms of SFH reconstruction is the determination of redshift. At high 
 %resolution, the available number
@@ -765,7 +778,7 @@ high resolution data may meaningfully improve SFH reconstructions in at least so
 %that mattered.} This means that redshift--SFH covariance is stronger than it needs to be, inflating 
 %the uncertainties on the latter. Furthermore, the added uncertainty comes in key places: 
 
-{\bfr A paragraph on the trivial cases of emission lines and IMF?}
+%{\bfr A paragraph on the trivial cases of emission lines and IMF?}
 
 \if 0
 The trivial instance of this is in measuring emission lines, where resolution is needed to 
