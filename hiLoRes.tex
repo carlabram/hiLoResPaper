@@ -258,8 +258,8 @@ treatment of their quality in its Appendix.
 
 In the fits, the above SED bases shared a common metallicity but could take independent extinctions 
 (\citealt{Calzetti00} law). Those were estimated by replicating the stellar template four times
-at four different {\bfr $A_{V}\in{0,0.5,1.0,2.0}$} values and finding their best-fit non-negative
-superposition. This process enabled each stellar population to be screened by potential complex dust
+at four different {\bfr $A_{V}\in\{0,0.5,1.0,2.0\}$} values and finding their best-fit non-negative
+superposition. This process enabled each stellar population to be screened by potentially complex dust
 geometries. Global metallicities were inferred from templates spanning 
 $-0.6\leq\logZ\leq0.3$ in 0.1 dex steps with a fitting prior peaked at $Z=Z_{\odot}$. 
 As such, the predicted spectra do not capture enrichment 
@@ -282,8 +282,8 @@ Subsequent to \citet{Dressler18}, all CSI spectrophotometry was refit using a ne
 SFH inference scheme based on a library of 500 $H=1$ stochastic tracks
 (\citealt{Kelson14,Kelson16,Kelson20}, Abramson in preparation). The tracks comprise 200 
 independent increments and are agnostic to the age of the universe: the same track can be stretched 
-to span an arbitrary $t\in[t_{0},\,\tobs]$ interval, with the absolute size of each increment in years 
-changing with a galaxy's redshift. The fits assumed a $t_{0}$ of $z=10$ and the star formation 
+to span an arbitrary $t\in[t_{0},\,\tobs]$ interval, with the absolute duration of each increment 
+changing with a galaxy's redshift. The fits assumed a $t_{0}$ of $z=10$. The star formation 
 increment at the sample's mean redshift was 33.5 Myr. Model spectrophotometry was
 generated at $\Delta z = 0.01$ intervals for redshift estimation.
 
@@ -310,8 +310,8 @@ compare the predictions from the fits discussed in the previous section.
 {\bfr We got the data in DATES. Here's how many objects, and a brief description of the data's
 $S/N$/quality/etc.}
 
-Figure \ref{fig:sample} shows the distributions in {\bfr stellar mass, {\it UVJ} colour-colour space, 
-and inferred half-mass time} of the sample objects.
+Figure \ref{fig:sample} shows the {\bfr {\it UVJ} colour-colour} distribution of the high resolution
+sample objects as compared to the full CSI dataset.
 
 \begin{figure}
 	\centering
@@ -353,16 +353,16 @@ and inferred half-mass time} of the sample objects.
 \section{Results}
 \label{sec:results}
 
-Here we compare the model high resolution spectra generated from the SFHs inferred using 
-Techniques 1 and 2 (Sections \ref{sec:blocks}, \ref{sec:h1}) to actual high resolution spectra taken for
-the same objects. In all but one case, we find that the median predicted line strength is within 
-1\% of the measured value. 
+We now compare the model spectra generated from our SFH inferences 
+(Sections \ref{sec:blocks}, \ref{sec:h1}) to actual high resolution spectra taken for
+the same objects. For all but one index, we find the median predicted line strength 
+to be within 1\% of the measured value. 
 
 We study the model spectrum corresponding to
 the maximum-likelihood SFH fit. Uncertainties are tabulated for the SFHs and attendant 
 parameters, but not propagated to the high resolution spectral models. As such,
-the comparisons below treat the predictions as more credible than they are. Combined with the fact 
-that the model metallicities are age-independent, our experiment is biased towards 
+the following comparisons treat the predictions as more credible than they are. Combined with the
+models' monolithic, age-independent metallicities, our experiment is biased towards 
 revealing significant differences between the data and the predictions. Any offsets we find---in units
 of flux or standard deviations---are thus closer to upper limits. %: the latter are less flexible than they could be and given greater credence than they should be.
 
@@ -608,7 +608,7 @@ Here's the way this should go:
 Our experiments imply that high resolution optical spectroscopy of any quality reasonable
 to expect for individual distant objects will not meaningfully 
 enhance knowledge of their underlying stellar populations compared to much more coarsely and broadly 
-sampled datasets (see Section \ref{sec:stacking}). That is, absorption line 
+sampled datasets (Section \ref{sec:stacking}). That is, absorption line 
 details---at least as presented at a galaxy's velocity dispersion---are sufficiently correlated to 
 stellar continua on large scales that capturing the details 
 of the latter across a long enough wavelength baseline yields the same information as 
@@ -630,8 +630,8 @@ This lesson is not new. The fact that
 metallicity modulates continuum light on $\sim$100--1000\,\AA\ scales is apparent in the
 output of any stellar population synthesis code. The phenomenon is also well recognized in 
 some contexts, such as as the tracking of Balmer line depths with $U-B$ or D4000 
-\citep[e.g.,][]{Kauffmann03,CidFernandes05}. What we have shown is simply that the above is true---perhaps
-to a greater than expected extent---for all (Lick) species. The observational trick is to sample the 
+\citep[e.g.,][]{Kauffmann03,CidFernandes05}. We have shown only that the above is true---perhaps
+to a greater extent than expected---for all (Lick) species. The observational trick is to sample the 
 SED so as to capture all of the relevant signal at minimal cost. We do not know the optimal sampling,
  only that CSI apparently meets the criteria that define it.
 
@@ -678,25 +678,25 @@ issue ({\bfr or cite and amplify}).
 \subsubsection{Theoretical}
 
 The theoretical upshot is that understanding this compression scheme---even if it is as basic 
-as the above---represents understanding the extent to which information about the
-physics an object was subject to over its history could possibly modulate its presentation at the one epoch we 
-will ever witness it at. That is, it must reveal the bedrock of the SFH $\mapsto$ SED mapping, and 
-therefore something close to the epistemological ceiling for the study of galaxy evolution. Knowledge 
-of that boundary condition cannot but enhance the questions investigators ask and the investigations 
-they pursue. Given the substantial human and technological resources devoted to such endeavors, 
-that insight seems beneficial.
+as the above---represents understanding the extent to which the
+physics an object was subject to over its history (what we want) could possibly modulate its 
+presentation at the one epoch we can observe it (what we get). That is, it must reveal the bedrock 
+of the SFH $\mapsto$ SED mapping, and therefore something close to the epistemological 
+ceiling for the study of galaxy evolution. Knowledge of such boundary conditions cannot but 
+enhance the questions investigators ask and the investigations they pursue. Given the substantial 
+human and technological resources devoted to such endeavors, such insight seems beneficial.
 
 How mechanically to reverse engineer this compression scheme is a separate question. Machine learning 
 could be used to identify via simulation the hypersurface characterising the precision to which 
 $\Mstel(t)$ is knowable as a function of data---$S/N$, SED sampling---and galaxy 
-properties---$z$, $\ssfr$, $Z$, $\sigma$, $A_{V}$, environment, morphology. A simpler exercise,
-is simply to invert the experiment we performed, fitting SFHs only to high resolution optical 
-spectra and predicting broadband fluxes the blue and red. One could then repeat this exercise 
-downgrading the resolution or omitting portions of the starting spectrum and measuring how 
+properties---$z$, $\ssfr$, $Z$, $\sigma$, $A_{V}$, environment, morphology. Alternately, one
+could simply invert the experiment we performed, fitting SFHs only to high resolution optical 
+spectra and predicting broadband fluxes to the UV and IR. One could then repeat this exercise 
+while downgrading the resolution or omitting portions of the starting spectrum and measuring how 
 the extrapolations changed, adding outrigger photometry as soon as the predictions began to deviate
-significantly from the truth. Figures 12 and D2 of \citet{Abramson20} show an examples of this kind of 
-approach---and hint at the predictive quality as a function of SED type---which of 
-course could also be coupled to machine learning.
+significantly from the truth. Figures 12 and D2 of \citet{Abramson20} show examples of this kind, 
+and hint at the predictive quality as a function of SED type. Of course, this effort could also be coupled 
+to machine learning.
 
 %fits to
 %low resolution rest-optical spectra like those from CSI do not predict, e.g., infrared
@@ -731,21 +731,21 @@ therefore opt for increased wavelength coverage at the expense of SED resolution
 %precision on the continuum, you have the same purchase on the metallicity as you would if you 
 %had all the lines. 
 
-Of course, we are not asserting that there is never a reason to take high resolution spectra. If 
+We are not asserting that there is never a reason to take high resolution spectra. If 
 one is interested in the IMF \citep{Conroy12}, specific abundance patterns, or kinematics, it is 
-clearly necessary. We only argue that it seems very unlikely that these investigations will
+necessary. We only argue that it seems unlikely that those investigations will
 qualitatively enhance assessments of galaxy growth.
 
-The only avenue we have found where they might is calcium strengths. These seem to 
-add a relatively large amount of information to our predictions in passive galaxies compared
-to the other Lick indices. However, while the prediction/data mismatches are indeed twice the 
-average offset, they are still only at the 2\% level. As such, to enhance SFH predictions, priors 
-linking Ca abundance to age must be accurate to at least that level, and spectra must have 
+The only contrary evidence we find lies in the calcium strengths of passive galaxies. These seem to 
+add a relatively large amount of information to our predictions compared to the other Lick indices. 
+However, while the prediction/data mismatches are twice the average offset, they are still only at 
+the 2\% level. As such, to enhance SFH predictions, priors 
+linking Ca to age must be accurate to at least that level, and spectra must have 
 $S/N\gtrsim14\,\AA^{-1}$ to see the signal at $1\,\sigma$. We believe attempting to construct 
 such an object or take such data are endeavors of diminishing returns: aperture and other 
 observational effects surely distort one's ability to interpret such precision when present, 
-and---as in the case of calcium---other, more easily observed properties like environmental 
-density (\CITE) are almost certainly equally good candidates for an age prior.
+and---as in the case of calcium---other, more easily observed properties like environment
+are probably equally good candidates for an age prior (\CITE).
 
 \begin{figure}
 \includegraphics[trim = 0cm 1cm 0cm 0cm]{noStackShowV}
@@ -766,47 +766,46 @@ but may be physically unhelpful.
 %either much larger than 2\% or at about 2\%, and they come from stacking histories, not from deriving 
 %histories from stacked data.
 
-Figure \ref{fig:noStack} explores different kinds of $H=1$ mass growth histories, the prior behind
-our Technique 2 SFH inferences (Section \ref{sec:h1}). These tracks are analogous to the suite of 
+Figure \ref{fig:noStack} explores the $H=1$ mass growth prior used in our Technique 2 SFH 
+inferences (Section \ref{sec:h1}). These tracks are analogous to the suite of 
 semi-analytic model-derived histories used by \citet{Pacifici12}. 
 
-The top panel shows the native distribution of $H=1$ trajectories modeled forward 
+The top panel shows the native distribution of trajectories modeled forward 
 from $t=0$ to $t=\tobs$ in green, with the ensemble's mean mass normalized to 
 $\langle M\rangle=1$ at $\tobs$. Overlaid in purple is the same suite of tracks, but with
-each independently normalized to $M(\tobs)=1$. The purple ensemble is the result one obtains
-by fitting: in the case of one object or a stack, the luminosity and color of the data will confine 
+each independently normalized to $M(\tobs)=1$. The purple ensemble is the result obtained
+by fitting: in the case of one object or a stack, the luminosity and color of the SED confines 
 all tracks in the library to a small range of normalizations. 
 
 %This is the outcome one might obtain if all of the SEDs
 %for objects above a given mass threshold were summed.
 
-Note that the mean of the inferred suite of histories is distinct from the mean of the native 
-suite of histories, even though they are composed of exactly the same tracks. Stepping forward, 
-as the galaxies do, results in a different outcome as stepping backwards---from an object or a stack
-of a class of objects---as the fitter must \citep[see also][]{Behroozi13a, Torrey17}. In this context,
-a physical question of interest would be ``Is $H=1$ stochasticity an approximation of the correct
-SFH reference set for real galaxies?'' The answer to that question would be obtained by assessing 
-whether {\it the difference between mean histories} is as shown here (using a non $H=1$ basis in
+Although they are composed of exactly the same tracks, the mean of the inferred suite of histories 
+is distinct from the mean of the native suite of histories. Stepping forward in time, as the galaxies do, 
+results in a different outcome as stepping backwards---as the fitter must 
+\citep[see also][]{Behroozi13a, Torrey17}. In this context, the physical question of interest is: 
+``Does $H=1$ stochasticity approximate the correct SFH reference set for real galaxies?'' The 
+answer to that question would be obtained by assessing whether the {\it difference} between the 
+inferred history and the theoretical mean is as shown here (using a non $H=1$ basis in
 the inference). Since this difference is large, high precision inferences are not needed; many 
-lower-quality measurements will do equally well.
+lower-quality measurements will do fine.
 
-The bottom panel shows a more intuitive example. We reproduce the purple tracks from the top panel split 
+The bottom panel shows a more practical example. We reproduce the purple tracks from the top panel split 
 into those that lead to passive (orange) or starforming (blue) galaxies at $\tobs$. 
 The half-mass time distributions for each subsample are shown at the bottom. From those distributions, 
-it is again clear that (1) the predicted difference in mean half mass times between passive and starforming
-galaxies is large, such that precision isn't necessary, and (2) that objects of the same stellar mass {\it and} 
-SFR---intuitive bin parameters---may have half-mass times differing by 40\% of a Hubble time. What 
-the average of these tracks---at any precision---says about the physics causing any one of them to behave 
-as it did is hard to see.
+it is clear that objects of the same stellar mass {\it and} SFR---intuitive parameters to stack on---may have 
+half-mass times differing by 40\% of a Hubble time. What the average of these tracks known to any 
+precision encodes about the physics causing any one of them to behave as it did is hard to see.
 
-The issue is that there are only two objects of physical interest: good assessments of (1) individual SFHs, 
-or (2) the typical SFH of a meaningfully defined class of galaxies. Due to $S/N$ requirements, (1) is not 
-obtainable. Meanwhile, (2) is an average over {\it histories}, and so is assessable by combining many 
-low-fidelity inferences for individual objects.\footnote{It is
+The issue is that there are only two objects of physical interest: good assessments of (1) individual SFHs 
+from which physics might be directly inferred, or  (2) the typical SFH of a meaningful class of galaxies. 
+Due to $S/N$ requirements, (1) is not obtainable beyond what CSI-quality datasets support. 
+Meanwhile, (2) is an average over {\it histories}, and so is assessable by combining many 
+low-fidelity inferences.\footnote{It is
 not clear that (2) is obtainable, either. ``Typical'' in this context properly refers to the {\it mode} history; 
 that which describes the largest fraction of class members. It may be that the {\it mean} history is our 
-only proxy for this, but it is not in reality the object of interest.} Both statements suggest the pursuit of data at sufficient $S/N$ 
-to yield $1\%$ line strength estimates---either directly or via stacking---is unnecessary. %This is what Figure \ref{fig:noStack}, bottom, shows.
+only proxy for this, but it is not in reality the object of interest.} Both statements imply that the 
+pursuit of data at the $S/N$ needed to yield $1\%$ line strengths---directly or via stacking---is unnecessary. %This is what Figure \ref{fig:noStack}, bottom, shows.
 
 %Of course, whether a meaningful class of objects is compilable from observed properties is questionable,
 %and certainly require parameters beyond what are shown in Figure \ref{fig:noStack}, bottom. 
@@ -853,17 +852,16 @@ that we have already reached that floor.
 \subsection{Prospects for exploiting Doppler information}
 \label{sec:redshifts}
 
-The area where high resolution spectroscopy yields unique insight is velocity space. The 
+High resolution spectroscopy does yield unique insight into velocity space. The 
 obvious enhancement is to redshifts. This may be important to mitigate against, e.g., [\ion{O}{ii}]
 emission masquerading as an enhanced Balmer break at low resolution, biasing galaxy ages 
-toward those of A stars. However, a more potentially useful application for SFH reconstruction
-is through using kinematics inferred from line profiles.
+toward those of A stars. However, kinematics could also potentially aid in SFH reconstruction.
 
-It's tempting to contemplate using velocity dispersions 
-to place colour-independent total stellar mass priors on SED fits to data of any resolution. This
-move is especially appealing because it would provide a handle on faint/old stars that might imprint on 
-a galaxy's velocity dispersion but remain undetectable in its SED. Unfortunately, a number of 
-complications suggest that doing so would not significantly improve current methods.
+It's tempting to contemplate using galaxy velocity dispersions 
+to place colour-independent total stellar mass priors on fits to SEDs of any resolution. This
+move is especially appealing because it could provide a handle on low-mass stars that imprint on 
+the velocity dispersion but are undetectable in an SED. Unfortunately, a number of 
+complications suggest that incorporating such data would not improve current methods.
 
 The prior would most readily enter through a $\sigma$--$\Mstel$ relation. The intrinsic scatter
 of this relation is $\sim$0.2 dex (\CITE), much broader than the formal---or even systematic---errors 
@@ -876,7 +874,7 @@ growth (\CITE) and the existence of thick disks, each stellar subpopulation may 
 dispersion to the global profile. If so, modeling dispersions will re-introduce exactly that the same 
 degeneracies in line decomposition as arose with SEDs. These 
 effects would have to be marginalized over---negating the precision gains---or the systematics from 
-failing to do so would have to be understood.
+failing to do so understood.
 
 {\bfr UTILITY AFTER SELECTION BY SFH---} Figure \ref{fig:disp} illustrates the sample's 
 velocity dispersion estimates. Here, we show {\bfr what we show} for galaxies split by their inferred 
