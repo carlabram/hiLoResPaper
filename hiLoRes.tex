@@ -749,9 +749,8 @@ density (\CITE) are almost certainly equally good candidates for an age prior.
 
 \begin{figure}
 \includegraphics[trim = 0cm 1cm 0cm 0cm]{noStackShowV}
-\caption{\bfb LEA -- here's why stacking will not buy you much. The difference between
-		the various half mass time averages is $\sim$2\%--3\%. I'm not sure if that matters
-		but I calculated it.}
+\caption{\bfb LEA -- here's why stacking will not buy you much. Histograms are normalized 
+		to unity at peak.}
 \label{fig:noStack}
 \end{figure}
 
@@ -759,52 +758,64 @@ density (\CITE) are almost certainly equally good candidates for an age prior.
 \label{sec:stacking}
 
 If $\sim$1\%--2\% line strength precision is unobtainable for useful numbers of individual objects, 
-it can be achieved through stacking (\CITE). In principle, modeling the stacks could reveal the growth 
-trajectory of the average constituent object. This statement is mathematically true, but physically unhelpful.
+it can be achieved through stacking (\CITE). In principle, modeling the stacks could reveal aspects 
+of the aggregate growth trajectories of the constituent objects. This statement is mathematically true, 
+but may be physically unhelpful.
 
 %the errors arise in the interpretation of such an object, they are
 %either much larger than 2\% or at about 2\%, and they come from stacking histories, not from deriving 
 %histories from stacked data.
 
-Figure \ref{fig:noStack} explores different kinds of $H=1$ math growth histories, the prior behind
-our Technique 2 SFH inferences (Section \ref{sec:h1}). These tracks are similar to, e.g., the suite of 
+Figure \ref{fig:noStack} explores different kinds of $H=1$ mass growth histories, the prior behind
+our Technique 2 SFH inferences (Section \ref{sec:h1}). These tracks are analogous to the suite of 
 semi-analytic model-derived histories used by \citet{Pacifici12}. 
 
 The top panel shows the native distribution of $H=1$ trajectories modeled forward 
-from $t=0$ to $t=1=\tobs$ in green, with the ensemble's {\it mean} mass normalized to 
-$\langle M\rangle=1$ at $\tobs$. The same distribution of tracks is overlaid in pink but normalized such 
-that {\it each track} has $M(\tobs)=1$. The latter go into the fitting, with the luminosity and color of any
-object confining each track in the library to a small range of normalizations. 
+from $t=0$ to $t=\tobs$ in green, with the ensemble's mean mass normalized to 
+$\langle M\rangle=1$ at $\tobs$. Overlaid in purple is the same suite of tracks, but with
+each independently normalized to $M(\tobs)=1$. The purple ensemble is the result one obtains
+by fitting: in the case of one object or a stack, the luminosity and color of the data will confine 
+all tracks in the library to a small range of normalizations. 
 
-Note that the inferred mean histories of these two suits are different, even though they are the same 
-tracks. Stepping forward, as the galaxies do, is different than stepping backwards, as the fitter does 
-\citep[see also][]{Behroozi13a, Torrey17}. {\it It is the difference between mean histories that must
-be inferred to assess whether $H=1$ stochasticity provides a physically accurate is the correct SFH 
-reference set.} As this difference is (a) large, and (b) derived from a stack of {\it histories}, not good 
-precision on single tracks, high precision data are not needed. {\bfb LEA -- I think I'm gonna cut this.}
+%This is the outcome one might obtain if all of the SEDs
+%for objects above a given mass threshold were summed.
 
-The bottom panel shows a more intuitive example. We reproduce the pink tracks from the top panel split 
-into those that lead to passive (orange) or starforming (blue) galaxies at the epoch of observation. 
-The half-mass time distributions for each subsample are shown at the bottom. From only these, it is 
-clear that a stack based on objects of the same stellar mass and SFR---intuitive bins to construct---might 
-contain objects with half-mass times that differ by 40\% of a Hubble time. What the average of these 
-tracks---at any precision---says about the physics causing any one of them to behave as it did is hard to see.
+Note that the mean of the inferred suite of histories is distinct from the mean of the native 
+suite of histories, even though they are composed of exactly the same tracks. Stepping forward, 
+as the galaxies do, results in a different outcome as stepping backwards---from an object or a stack
+of a class of objects---as the fitter must \citep[see also][]{Behroozi13a, Torrey17}. In this context,
+a physical question of interest would be ``Is $H=1$ stochasticity an approximation of the correct
+SFH reference set for real galaxies?'' The answer to that question would be obtained by assessing 
+whether {\it the difference between mean histories} is as shown here (using a non $H=1$ basis in
+the inference). Since this difference is large, high precision inferences are not needed; many 
+lower-quality measurements will do equally well.
 
-The fundamental issue is that there are only two objects of physical interest: (1) high-fidelity assessments
-of  individual SFHs, or (2) the {\it typical SFH} of a meaningfully defined class of galaxies. Due to 
-$S/N$ requirements, (1) is not obtainable. Meanwhile, (2) is an average over {\it histories}, and so is 
-certainly assessable by combining many low-fidelity inferences for individual objects, which don't require 
-good data.\footnote{It is actually not clear that (2) is obtainable, either. ``Typical''
-in this context should properly refer to the {\it mode} history; that which describes the largest 
-fraction of class members. It may be that the {\it mean} history is our only proxy for this, but
-it is not in reality the object of interest.} %This is what Figure \ref{fig:noStack}, bottom, shows.
+The bottom panel shows a more intuitive example. We reproduce the purple tracks from the top panel split 
+into those that lead to passive (orange) or starforming (blue) galaxies at $\tobs$. 
+The half-mass time distributions for each subsample are shown at the bottom. From those distributions, 
+it is again clear that (1) the predicted difference in mean half mass times between passive and starforming
+galaxies is large, such that precision isn't necessary, and (2) that objects of the same stellar mass {\it and} 
+SFR---intuitive bin parameters---may have half-mass times differing by 40\% of a Hubble time. What 
+the average of these tracks---at any precision---says about the physics causing any one of them to behave 
+as it did is hard to see.
 
-Of course, whether a meaningful class of objects is compilable from observed properties is questionable,
-and certainly require parameters beyond what are shown in Figure \ref{fig:noStack}, bottom. If you can, 
-however, the physical inference may ultimately be in the difference between forward and backward 
-projected SFH inferences (top). 
+The issue is that there are only two objects of physical interest: good assessments of (1) individual SFHs, 
+or (2) the typical SFH of a meaningfully defined class of galaxies. Due to $S/N$ requirements, (1) is not 
+obtainable. Meanwhile, (2) is an average over {\it histories}, and so is assessable by combining many 
+low-fidelity inferences for individual objects.\footnote{It is
+not clear that (2) is obtainable, either. ``Typical'' in this context properly refers to the {\it mode} history; 
+that which describes the largest fraction of class members. It may be that the {\it mean} history is our 
+only proxy for this, but it is not in reality the object of interest.} Both statements suggest the pursuit of data at sufficient $S/N$ 
+to yield $1\%$ line strength estimates---either directly or via stacking---is unnecessary. %This is what Figure \ref{fig:noStack}, bottom, shows.
 
-For neither purpose are high-precision, high-resolution spectra beneficial. {\bfb LEA -- basically,
+%Of course, whether a meaningful class of objects is compilable from observed properties is questionable,
+%and certainly require parameters beyond what are shown in Figure \ref{fig:noStack}, bottom. 
+%If you can, 
+%however, the physical inference may ultimately be in the difference between forward and backward 
+%projected SFH inferences (top). 
+%For neither purpose are high-precision, high-resolution spectra beneficial. 
+
+{\bfb LEA -- basically,
 the physics is in the histories (if anywhere), so you want to stack the histories (if anything), and 
 for that you don't need good data at the single object level. Maybe there's room to compare
 the stack of histories to the history derived from a stack? What would that tell you? Something
