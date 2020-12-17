@@ -1,11 +1,14 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Data}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Master sample}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{High-resolution spectroscopy}{section.2}% 4
-\BOOKMARK [1][-]{section.3}{Confronting predictions with high-resolution data}{}% 5
-\BOOKMARK [2][-]{subsection.3.1}{Systematic errors}{section.3}% 6
-\BOOKMARK [1][-]{section.4}{Implications}{}% 7
-\BOOKMARK [2][-]{subsection.4.1}{Spectral pixels are correlated}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.2}{Where is the information going?}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.3}{Future Work}{section.4}% 10
-\BOOKMARK [1][-]{section.5}{Summary}{}% 11
+\BOOKMARK [2][-]{subsection.1.1}{tex filler}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Data}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Master sample}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{High resolution spectroscopy}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Results}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Experimental setup}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Sample-wide outcomes}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{The Balmer lines}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{Systematic errors}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Implications for direct SFH inference}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{Prospects for exploiting Doppler information}{section.4}% 13
+\BOOKMARK [1][-]{section.5}{Summary}{}% 14
