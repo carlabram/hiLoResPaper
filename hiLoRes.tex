@@ -99,7 +99,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[More is not better]{You do not need high-resolution spectra to model galaxy growth}
+\title[More is not better]{You don't need high-resolution spectra to model galaxy growth}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -117,7 +117,7 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 %\date{Submitted to {\it MNRAS} 31 May 2019}
 
 % Enter the current year, for the copyright statements etc.
-\pubyear{2020}
+\pubyear{2021}
 
 % Don't change these lines
 \begin{document}
@@ -165,6 +165,10 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
+%\citet{Pacifici12} showed that $R\sim1000$ rest optical spectra do not markedly improve
+%SFH estimates compared to $R\sim100$ spectra. Here, we show that, once combined with UV--IR
+%photometry, all of the information in higher resolution spectra can be captured.
+
 \section{Introduction}
 \label{sec:intro}
 
@@ -174,49 +178,42 @@ in this work because they can be decomposed into combinations of distinct stella
 known ages. The resulting coefficients encode the stellar mass a galaxy formed at the lookback time 
 corresponding to each population's age.
 	
-Different stellar populations have different but not orthogonal SEDs. Thus, galaxy SED decompositions 
+Different stellar populations have different but not orthogonal SEDs. Thus, SED decompositions 
 and the SFHs inferred therefrom are degenerate \citep{CidFernandes05}. The degeneracies are 
 compounded by formally age-independent effects like metallicity and dust. 
 
-In theory, using higher resolution spectra should ameliorate this issue: the absorption lines visible 
-in such data increase the contrast between stellar subpopulations, constrain metallicities, and so yield 
-better age/mass coefficients. In practice, this seems unlikely.
+In theory, using high resolution spectra should ameliorate this issue: the absorption lines visible 
+in such data should increase the contrast between stellar subpopulations, constrain metallicities, 
+and yield better age/mass coefficients. Here, we perform an experiment to see how true this 
+statement is in practice.
 
-%\citet{Pacifici12} showed that $R\sim1000$ rest optical spectra do not markedly improve
-%SFH estimates compared to $R\sim100$ spectra. Here, we show that, once combined with UV--IR
-%photometry, all of the information in higher resolution spectra can be captured.
+The experiment is simple. First, we infer SFHs from low resolution ($R\sim25$) optical prism 
+data and broadband UV--IR photometry. Next, we create high resolution ($R\sim800$) model spectra 
+from the SFH inferences, forming predictions for the strengths of absorption lines not visible in the original
+data. Finally, we compare those predictions to real $R\sim800$ spectra obtained for the same objects. 
+The residuals in this comparison reveal how much information the high resolution data would have added 
+to the SFH inference.
 
-We perform a simple experiment to assess the added utility of $R\sim800$ optical spectra in 
-reconstructing SFHs as compared to $R\sim25$ optical prism data and broadband UV--IR photometry. 
-We:
-\benum
-	\item infer SFHs from low resolution data;
-	\item create high resolution model spectra from those inferences;
-	\item compare the predictions to high resolution data obtained post facto for the same
-		objects. 
-\eenum
+In a sample of \ntot\ galaxies at $\langle z\rangle=\midz$, we find that all but one non-Balmer
+Lick absorption feature \citep{Worthey94} is predicted to better than 1\% in the median irrespective
+of whether a galaxy is currently forming stars. {\color{red} This level of accuracy holds even 
+for features outside the original prism bandpass.} The exception---Ca4227 in passive 
+galaxies---is known to behave anomalously, and is only $\sim$2\% weaker than expected. 
+The Balmer mismatches are due to unmodeled emission.
 
-In a sample of \ntot\ galaxies at $\langle z\rangle=\midz$, we predict all but one Lick absorption 
-feature \citep{Worthey94} to better than 1\% in the median---including 
-{\bfr those outside the original prsim bandpass}. The exception---Ca4227 in passive 
-galaxies only---is known to behave anomalously, and is only $\sim$2.5\% weaker than expected. 
+Given the extent to which a model constrained by coarsely (but broadly) sampled data 
+accurately reproduces features only visible in finely (but narrowly) sampled data, we are 
+forced to conclude that the additional pixels in high resolution spectra do not add meaningful 
+flux-related SFH constraints for individual galaxies. As such, future surveys aimed at supporting 
+SFH reconstruction might do better to maximize wavelength coverage as opposed to spectral 
+resolution in their designs.
 
-We conclude that the additional pixels in high resolution spectra do not add meaningful 
-flux-related SED constraints for individual galaxies compared to much more coarsely 
-but broadly sampled data.
-As such, we suggest that future surveys aimed at supporting SFH reconstruction opt for 
-wavelength coverage over spectral resolution in their designs.
-
-Section \ref{sec:data} describes the data. Section \ref{sec:results} compares 
-the spectral predictions to the high resolution data. Section \ref{sec:upshot} presents our key results. 
-Section \ref{sec:discussion} discusses their implications. We use AB magnitudes and assume 
+Below, Section \ref{sec:data} describes the data, \ref{sec:results} compares 
+the spectral predictions to the high resolution data, and \ref{sec:upshot} presents our key results. 
+Section \ref{sec:discussion} discusses implications. We use AB magnitudes and assume 
 a \citet{Chabrier03} stellar initial mass function (IMF) with $(H_{0}, \Omega_{M}, \Omega_{\Lambda}) =
 (70~{\rm km~s^{-1}~Mpc^{-1}}, 0.3, 0.7)$ throughout.
 
-
-\subsection{tex filler}
-
-needed to put some stuff here because for some reason my compiler breaks without it
 
 %------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------
@@ -228,13 +225,15 @@ needed to put some stuff here because for some reason my compiler breaks without
 \label{sec:master}
 
 We use data from the {\it Carnegie Spitzer IMACS Survey} \citep[CSI;][]{Kelson14a}. CSI provides
-Magellan-IMACS Low- and Uniform-Dispersion Prism spectroscopy (\CITE) for objects with {\it Spitzer} 
-$[3.5]\leq21$ in {\bfr XXX sq.~deg.} from {\bfr THESE FIELDS}. Combined with supplemental 
-$ugrizJK_{s}$ photometry from the NEWFIRM archive (\CITE) and Canada-France-Hawai`i Telescope 
-Legacy Survey (CFHTLS; \CITE), these data were used to derive flexible SFHs for each galaxy
-during redshift estimation. The sample is unbiased to $\logM\sim10.3$ at $z\sim0.7$.
-The spectral resolution of the prisms varies from $R\sim{\bfr XXX}$ to $R\sim{\bfr YYY}$ at
-{\bfr wavelengths}, about {\bfr 80$\times$} coarser than the Sloan Digital Sky Survey \citep{York00}.
+Magellan-IMACS Low- and Uniform-Dispersion Prism spectroscopy \citep{Coil11} for objects with {\it Spitzer} 
+$[3.5]\leq21$ in {\bfr 15.3 sq~deg} from the {\bfr XMM-LSS, ELIAS S1, and CDF South} fields. 
+Combined with supplemental 
+$ugrizJK_{s}$ photometry from the NEWFIRM archive \citep{Autry03} and 
+Canada-France-Hawai`i Telescope Legacy Survey \citep[CFHTLS][]{Cuillandre06}, these data were used to derive 
+flexible SFHs for each galaxy during redshift estimation. The sample is unbiased to 
+$\logM\sim10.3$ at $z\sim0.7$. The spectral resolution of the prisms varies from 
+$R\sim50$ to $R\sim15$ at $\lambda=0.5$ and $1\,\micron$, \resp---about 
+60$\times$ coarser than the Sloan Digital Sky Survey \citep{York00}.
 
 We derive SFHs from these data in two ways. Our results are quantitatively similar
 using either approach.
@@ -460,7 +459,7 @@ technique in Sections XYZ, but they are ancillary to our main point.}
 Figure \ref{fig:metric} illustrates how we compare our spectral predictions to the high resolution data.
 Here, we re-present Figure \ref{fig:scheme}, bottom, zoomed-in to the region surrounding {\bfr FEATURE}.
 {\bfb LEA -- If we need to divide the data by the model, we'll make this 2 panels.} The central 
-bandpass of the corresponding Lick index is shown in {\bfr however} (\CITE). We define 
+bandpass of the corresponding Lick index is shown in {\bfr however}. We define 
 the mismatch between prediction and high resolution data as:
 \begin{equation}
 	\bfr \Delta = {\rm whatever~Dan~says}.
