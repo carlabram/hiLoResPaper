@@ -172,41 +172,41 @@ $^1$	Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA\\
 \section{Introduction}
 \label{sec:intro}
 
-A central ambition of the study of galaxy evolution is to understand stellar mass growth; i.e., 
-star formation histories (SFHs). Spectral energy distributions (SEDs) are the key empirical anchor 
-in this work because they can be decomposed into combinations of distinct stellar populations of 
-known ages. The resulting coefficients encode the stellar mass a galaxy formed at the lookback time 
-corresponding to each population's age.
+Understanding stellar mass growth is a central ambition of the study of galaxy evolution. 
+Spectral energy distributions (SEDs) are the key empirical anchors in this work because they 
+can be decomposed into combinations of distinct stellar populations of known ages. The resulting 
+coefficients encode the stellar mass a galaxy formed at the lookback time corresponding to each 
+population's age---i.e., its star formation history (SFH).
 	
 Different stellar populations have different but not orthogonal SEDs. Thus, SED decompositions 
-and the SFHs inferred therefrom are degenerate \citep{CidFernandes05}. The degeneracies are 
-compounded by formally age-independent effects like metallicity and dust. 
+and SFH inferences are degenerate \citep{CidFernandes05}. The degeneracies are compounded by 
+formally age-independent effects like metallicity and dust.
 
 In theory, using high resolution spectra should ameliorate this issue: the absorption lines visible 
 in such data should increase the contrast between stellar subpopulations, constrain metallicities, 
 and yield better age/mass coefficients. Here, we perform an experiment to see how true this 
 statement is in practice.
 
-The experiment is simple. First, we infer SFHs from low resolution ($R\sim25$) optical prism 
-data and broadband UV--IR photometry. Next, we create high resolution ($R\sim800$) model spectra 
-from the SFH inferences, forming predictions for the strengths of absorption lines not visible in the original
-data. Finally, we compare those predictions to real $R\sim800$ spectra obtained for the same objects. 
-The residuals in this comparison reveal how much information the high resolution data would have added 
-to the SFH inference.
+First, we infer SFHs from low resolution ($R\sim25$) optical prism 
+data and broadband UV--IR photometry. Next, we create high resolution ($R\sim800$) model 
+spectra from these SFH inferences and predict the strengths of absorption lines not visible 
+in the original data. Finally, we compare those predictions to real $R\sim800$ spectra obtained 
+for the same objects. The residuals in these comparisons reveal how much information the high 
+resolution spectra would have added to the SFH inference. 
 
-In a sample of \ntot\ galaxies at $\langle z\rangle=\midz$, we find that all but one non-Balmer
-Lick absorption feature \citep{Worthey94} is predicted to better than 1\% in the median irrespective
-of whether a galaxy is currently forming stars. {\color{red} This level of accuracy holds even 
-for features outside the original prism bandpass.} The exception---Ca4227 in passive 
-galaxies---is known to behave anomalously, and is only $\sim$2\% weaker than expected. 
-The Balmer mismatches are due to unmodeled emission.
+In a sample of \ntot\ galaxies at $\langle z\rangle=\midz$, using two independent SFH inference
+techniques, our model spectra predict all but one non-Balmer Lick absorption index 
+to better than 1\% in the median \citep{Worthey94}. This finding holds regardless of whether a 
+galaxy is currently forming stars, {\color{red} and for features outside the original prism 
+bandpass.} The exception---Ca4227 in passive galaxies---is known to behave anomalously, and  
+is only $\sim$2\% weaker than expected. Meanwhile, the Balmer mismatches are clearly due to 
+unmodeled nebular emission, not incorrectly modeled stellar ages.
 
-Given the extent to which a model constrained by coarsely (but broadly) sampled data 
-accurately reproduces features only visible in finely (but narrowly) sampled data, we are 
-forced to conclude that the additional pixels in high resolution spectra do not add meaningful 
-flux-related SFH constraints for individual galaxies. As such, future surveys aimed at supporting 
-SFH reconstruction might do better to maximize wavelength coverage as opposed to spectral 
-resolution in their designs.
+Given the accuracy with which a model constrained by coarsely-but-broadly sampled data 
+reproduces features only visible in finely-but-narrowly sampled data, we conclude that the additional 
+pixels in high resolution spectra do not add meaningful flux-related SFH constraints for individual 
+galaxies. As such, future surveys aimed at supporting SFH reconstruction should aim to maximize 
+wavelength coverage as opposed to spectral resolution.
 
 Below, Section \ref{sec:data} describes the data, \ref{sec:results} compares 
 the spectral predictions to the high resolution data, and \ref{sec:upshot} presents our key results. 
@@ -229,8 +229,10 @@ Magellan-IMACS Low- and Uniform-Dispersion Prism spectroscopy \citep{Coil11} for
 $[3.5]\leq21$ in {\bfr 15.3 sq~deg} from the {\bfr XMM-LSS, ELIAS S1, and CDF South} fields. 
 Combined with supplemental 
 $ugrizJK_{s}$ photometry from the NEWFIRM archive \citep{Autry03} and 
-Canada-France-Hawai`i Telescope Legacy Survey \citep[CFHTLS][]{Cuillandre06}, these data were used to derive 
-flexible SFHs for each galaxy during redshift estimation. The sample is unbiased to 
+Canada-France-Hawai`i Telescope Legacy Survey \citep[CFHTLS;][]{Cuillandre06}, these data were used to derive 
+flexible SFHs for each galaxy during redshift estimation. 
+
+The sample is unbiased to 
 $\logM\sim10.3$ at $z\sim0.7$. The spectral resolution of the prisms varies from 
 $R\sim50$ to $R\sim15$ at $\lambda=0.5$ and $1\,\micron$, \resp---about 
 60$\times$ coarser than the Sloan Digital Sky Survey \citep{York00}.
@@ -248,30 +250,30 @@ The CSI spectrophotometry was first modeled using 5 precomputed SEDs based on SF
 constant star formation rates from:
 \bitem
 	\item 0.0 to 0.2 Gyr prior to $\tobs$;
-	\item 0.2 to 0.5 Gyr prior to $\tobs$;
-	\item 0.5 to 1.0 Gyr prior to $\tobs$;
-	\item 1.0 to 2.0 Gyr prior to $\tobs$;
+	\item 0.2 to 0.5 Gyr;% prior to $\tobs$;
+	\item 0.5 to 1.0 Gyr;% prior to $\tobs$;
+	\item 1.0 to 2.0 Gyr;% prior to $\tobs$;
 	\item 2.0 Gyr prior to $\tobs$ to $z=5$;
 \eitem
-where $\tobs$ corresponds to the object's redshift and $z=5$ is taken as the onset of star formation. If 
-the data prefer, the oldest bin could also take the form of a 1 Gyr top hat starting at $z=5$. 
+where $\tobs$ corresponds to the object's redshift and $z=5$ is taken as the onset of star formation. 
+If the data preferred, the oldest bin could also take the form of a 1 Gyr top hat starting at $z=5$. 
 \citet{Dressler16, Dressler18} examine these SFHs in detail with the latter containing a thorough 
-treatment of their quality in its Appendix.
+assessment of their quality in its Appendix.
 
-In the fits, the above SED bases share a common metallicity but take independent extinctions 
-(\citealt{Calzetti00} law). The latter were estimated by replicating the stellar template four times
+In the fits, the above SED bases shared a metallicity but took independent extinctions 
+(\citealt{Calzetti00} law). The latter were estimated by replicating the stellar template 
 at four different {\bfr $A_{V}\in\{0,0.5,1.0,2.0\}$} values and finding their best-fit non-negative
 superposition. This process enabled each stellar population to be screened by potentially complex 
 dust geometries. Global metallicities were inferred from templates spanning 
-$-0.6\leq\logZ\leq0.3$ in 0.1 dex steps with a prior peaked at $Z=Z_{\odot}$. 
-As such, the predicted spectra do not capture enrichment 
-histories \citep[cf.][]{Pacifici12, Morishita19}. The predictive accuracy of these models stands despite 
+$-0.6\leq\logZ\leq0.3$ in 0.1 dex steps with a prior peaked at $Z_{\odot}$. 
+As such, the predicted spectra did not capture enrichment histories 
+\citep[cf.][]{Pacifici12, Morishita19}. The predictive accuracy of these models stands despite 
 this shortcoming (Section \ref{sec:results}).
 
 The spectral templates were generated using Flexible Stellar Population Synthesis 
-\citep[FSPS;][]{ConroyGunnWhite09} assuming default abundance patterns. When inferring the SFHs, 
-these models---5 mass amplitudes $\times$ 4 $A_{V}$s + 1 metallicity + 1 redshift + 4 emission line/blend 
-amplitudes = 26 free parameters---were typically constrained by 
+\citep[FSPS;][]{ConroyGunnWhite09} assuming default abundances. When inferring the SFHs, 
+these models---5 mass amplitudes $\times$ 4 $A_{V}$s + 1 metallicity + 1 redshift + 
+4 emission line/blend amplitudes = 26 free parameters---were typically constrained by 
 7 photometric + {\bfr $\sim$150} spectral datapoints. Redshifts were gridded in $\Delta z = 0.005$ 
 increments and inferred jointly with the other parameters.
 
@@ -282,19 +284,21 @@ Hereafter, we refer to this approach as ``Technique 1.''
 
 Subsequent to \citet{Dressler18}, all CSI spectrophotometry was refit using a new 
 SFH inference scheme based on a library of 500 $H=1$ stochastic tracks
-(\citealt{Kelson14,Kelson16,Kelson20,Abramson20b}, Abramson in preparation). The tracks comprise 200 
-independent increments and are agnostic to the age of the universe: the same track can be stretched 
-to span an arbitrary $t\in[t_{0},\,\tobs]$ interval with the absolute duration of each increment 
-changing with a galaxy's redshift. The fits assumed a $t_{0}$ of $z=10$. The star formation 
-increment at the sample's mean redshift was 33.5 Myr. Model spectrophotometry was
-generated at $\Delta z = 0.01$ intervals for redshift estimation.
+(\citealt{Kelson14,Kelson16,Kelson20,Abramson20b}, Abramson in preparation). The tracks 
+comprised 200 independent increments but were agnostic to the age of the universe: they were 
+simply stretched to span arbitrary $t\in[t_{0},\,\tobs]$ intervals with the absolute duration of 
+each increment changing with a galaxy's redshift. The fits assumed a $t_{0}$ of $z=10$, such that
+th star formation increment at the sample's mean redshift was 33.5 Myr. Model spectrophotometry 
+was generated at $\Delta z = 0.01$ intervals for redshift estimation.
 
-These models assume monolithic values for both metallicity and extinction. Templates were generated
-at $-1.5\leq\logZ\leq0.3$ in 0.3 dex steps {\bfr with a fitting prior peaked at $Z=Z_{\odot}$}. Following 
-\citealt{Pacifici12}, the fitter finds for each $H=1$ track in the library the probability that it generated
-an observed SED given a redshift, metallicity, $A_{V}$, spectral fluxing function 
-({\bfr $\propto \lambda^{k}$}), and set of four emission line/blend amplitudes. All SED templates 
-were generated using FSPS with default abundances.
+These models assumed monolithic values for both metallicity and extinction. Templates were 
+generated by FSPS assuming default abundances at $-1.5\leq\logZ\leq0.3$ in 0.3 dex steps 
+{\bfr with a prior peaked at $Z_{\odot}$}.
+
+Following \citealt{Pacifici12}, the fitter found for each $H=1$ track in the library the probability 
+that it generated an observed SED given a redshift, metallicity, $A_{V}$, spectral fluxing function 
+({\bfr $\propto \lambda^{k}$}), and set of four emission line/blend amplitudes based on a
+chi-squared likelihood metric.
 
 Hereafter, we refer to this approach as ``Technique 2.''
 
